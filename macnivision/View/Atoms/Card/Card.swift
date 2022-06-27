@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CloudKit
 
 struct AppCard: View {
     @State var width: CGFloat = 300

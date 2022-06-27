@@ -28,6 +28,7 @@
 		2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2902869A0750014A95E /* ElevatedButton.swift */; };
 		2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2962869A0A90014A95E /* OutlinedButton.swift */; };
 		2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2982869A0D80014A95E /* CircleButton.swift */; };
+		2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2FC7C2902869A0750014A95E /* ElevatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatedButton.swift; sourceTree = "<group>"; };
 		2FC7C2962869A0A90014A95E /* OutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedButton.swift; sourceTree = "<group>"; };
 		2FC7C2982869A0D80014A95E /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhyscriatristCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 		2FC7C29E2869A1330014A95E /* PhysciatristCard */ = {
 			isa = PBXGroup;
 			children = (
+				2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */,
 			);
 			path = PhysciatristCard;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */,
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
 				2F1342F728658DA600A5CB9C /* macnivision.xcdatamodeld in Sources */,
 				2FC7C28928699F730014A95E /* TextField.swift in Sources */,
