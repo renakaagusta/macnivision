@@ -16,8 +16,6 @@
 		2F13430128658DA600A5CB9C /* macnivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430028658DA600A5CB9C /* macnivisionTests.swift */; };
 		2F13430B28658DA600A5CB9C /* macnivisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */; };
 		2F13430D28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */; };
-		2F991C4E2869682800B4E914 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C4C2869682800B4E914 /* Colors.swift */; };
-		2F991C4F2869682800B4E914 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C4D2869682800B4E914 /* Strings.swift */; };
 		2F991C722869700A00B4E914 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C712869700A00B4E914 /* DashboardView.swift */; };
 		2F991C742869703F00B4E914 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C732869703F00B4E914 /* PetView.swift */; };
 		2F991C762869705100B4E914 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C752869705100B4E914 /* JournalView.swift */; };
@@ -29,6 +27,8 @@
 		2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2962869A0A90014A95E /* OutlinedButton.swift */; };
 		2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2982869A0D80014A95E /* CircleButton.swift */; };
 		2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */; };
+		2FC7C2A42869A3B20014A95E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A32869A3B20014A95E /* Colors.swift */; };
+		2FC7C2A62869A3C00014A95E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A52869A3C00014A95E /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,6 @@
 		2F13430628658DA600A5CB9C /* macnivisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macnivisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITests.swift; sourceTree = "<group>"; };
 		2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2F991C4C2869682800B4E914 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = macnivision/Backup/Constants/Colors.swift; sourceTree = SOURCE_ROOT; };
-		2F991C4D2869682800B4E914 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = macnivision/Backup/Constants/Strings.swift; sourceTree = SOURCE_ROOT; };
 		2F991C712869700A00B4E914 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2F991C732869703F00B4E914 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		2F991C752869705100B4E914 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		2FC7C2962869A0A90014A95E /* OutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedButton.swift; sourceTree = "<group>"; };
 		2FC7C2982869A0D80014A95E /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhyscriatristCard.swift; sourceTree = "<group>"; };
+		2FC7C2A32869A3B20014A95E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2FC7C2A52869A3C00014A95E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,8 +206,8 @@
 		2F991C4B2869680C00B4E914 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				2F991C4C2869682800B4E914 /* Colors.swift */,
-				2F991C4D2869682800B4E914 /* Strings.swift */,
+				2FC7C2A32869A3B20014A95E /* Colors.swift */,
+				2FC7C2A52869A3C00014A95E /* Strings.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -440,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */,
+				2FC7C2A42869A3B20014A95E /* Colors.swift in Sources */,
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
 				2F1342F728658DA600A5CB9C /* macnivision.xcdatamodeld in Sources */,
 				2FC7C28928699F730014A95E /* TextField.swift in Sources */,
@@ -449,12 +450,11 @@
 				2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */,
 				2F991C792869706D00B4E914 /* MedicalInfoView.swift in Sources */,
 				2F991C722869700A00B4E914 /* DashboardView.swift in Sources */,
-				2F991C4E2869682800B4E914 /* Colors.swift in Sources */,
 				2F1342F428658DA600A5CB9C /* Persistence.swift in Sources */,
+				2FC7C2A62869A3C00014A95E /* Strings.swift in Sources */,
 				2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */,
 				2FC7C28D28699FF50014A95E /* Card.swift in Sources */,
 				2F1342ED28658DA500A5CB9C /* ContentView.swift in Sources */,
-				2F991C4F2869682800B4E914 /* Strings.swift in Sources */,
 				2F1342EB28658DA500A5CB9C /* macnivisionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

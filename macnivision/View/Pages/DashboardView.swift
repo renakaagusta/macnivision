@@ -31,9 +31,9 @@ struct DashboardView: View {
                         Text("Medical Info")
                     }.tag(3)
                 }.accentColor(Color.primaryColor).navigationTitle(selection == 1 ? "Pet" : (selection == 2 ? "Journal" : "Medical Info"))
-            }//.navigationBarBackButtonHidden(true)
+            }.navigationBarBackButtonHidden(true)
     }
-//}
+}
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {

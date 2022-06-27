@@ -6,4 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct PhyscrriatristCard: View {
+    
+    var body: some View {
+        AppCard()
+    }
+}
+
+struct PhyscrriatristCard_Previews: PreviewProvider {
+    static var previews: some View {
+        PhyscrriatristCard()
+    }
+}
 
