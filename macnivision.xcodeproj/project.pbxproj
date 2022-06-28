@@ -16,6 +16,16 @@
 		2F13430128658DA600A5CB9C /* macnivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430028658DA600A5CB9C /* macnivisionTests.swift */; };
 		2F13430B28658DA600A5CB9C /* macnivisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */; };
 		2F13430D28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */; };
+		2F803889286AEDC4008BF4BF /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803883286AEDC4008BF4BF /* ContentView2.swift */; };
+		2F80388A286AEDC4008BF4BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803884286AEDC4008BF4BF /* MainView.swift */; };
+		2F80388B286AEDC4008BF4BF /* OnboardingFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */; };
+		2F80388C286AEDC4008BF4BF /* OnboardingNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */; };
+		2F80388D286AEDC4008BF4BF /* OnboardingPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */; };
+		2F80388E286AEDC4008BF4BF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803888286AEDC4008BF4BF /* OnboardingView.swift */; };
+		2F803893286AEDE0008BF4BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80388F286AEDE0008BF4BF /* User.swift */; };
+		2F803894286AEDE0008BF4BF /* Medical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803890286AEDE0008BF4BF /* Medical.swift */; };
+		2F803895286AEDE0008BF4BF /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803891286AEDE0008BF4BF /* Journal.swift */; };
+		2F803896286AEDE0008BF4BF /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803892286AEDE0008BF4BF /* Pet.swift */; };
 		2F991C722869700A00B4E914 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C712869700A00B4E914 /* DashboardView.swift */; };
 		2F991C742869703F00B4E914 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C732869703F00B4E914 /* PetView.swift */; };
 		2F991C762869705100B4E914 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C752869705100B4E914 /* JournalView.swift */; };
@@ -61,6 +71,16 @@
 		2F13430628658DA600A5CB9C /* macnivisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macnivisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITests.swift; sourceTree = "<group>"; };
 		2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F803883286AEDC4008BF4BF /* ContentView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		2F803884286AEDC4008BF4BF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingFeatureView.swift; sourceTree = "<group>"; };
+		2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingNicknameView.swift; sourceTree = "<group>"; };
+		2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPetView.swift; sourceTree = "<group>"; };
+		2F803888286AEDC4008BF4BF /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2F80388F286AEDE0008BF4BF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F803890286AEDE0008BF4BF /* Medical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medical.swift; sourceTree = "<group>"; };
+		2F803891286AEDE0008BF4BF /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		2F803892286AEDE0008BF4BF /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		2F991C712869700A00B4E914 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2F991C732869703F00B4E914 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		2F991C752869705100B4E914 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
@@ -124,10 +144,10 @@
 		2F1342E928658DA500A5CB9C /* macnivision */ = {
 			isa = PBXGroup;
 			children = (
+				2F803882286AEDB2008BF4BF /* Model */,
 				2F991C4B2869680C00B4E914 /* Constant */,
 				2F991C4A286967EF00B4E914 /* ViewModel */,
 				2F991C48286967CF00B4E914 /* Service */,
-				2F991C47286967C200B4E914 /* Model */,
 				2F991C432869679800B4E914 /* View */,
 				2F1342EA28658DA500A5CB9C /* macnivisionApp.swift */,
 				2F1342EC28658DA500A5CB9C /* ContentView.swift */,
@@ -164,6 +184,17 @@
 			path = macnivisionUITests;
 			sourceTree = "<group>";
 		};
+		2F803882286AEDB2008BF4BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F803891286AEDE0008BF4BF /* Journal.swift */,
+				2F803890286AEDE0008BF4BF /* Medical.swift */,
+				2F803892286AEDE0008BF4BF /* Pet.swift */,
+				2F80388F286AEDE0008BF4BF /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2F991C432869679800B4E914 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,13 +203,6 @@
 				2FC7C25E28699B390014A95E /* Pages */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2F991C47286967C200B4E914 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2F991C48286967CF00B4E914 /* Service */ = {
@@ -226,6 +250,12 @@
 		2FC7C25E28699B390014A95E /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				2F803883286AEDC4008BF4BF /* ContentView2.swift */,
+				2F803884286AEDC4008BF4BF /* MainView.swift */,
+				2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */,
+				2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */,
+				2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */,
+				2F803888286AEDC4008BF4BF /* OnboardingView.swift */,
 				2F991C712869700A00B4E914 /* DashboardView.swift */,
 				2F991C732869703F00B4E914 /* PetView.swift */,
 				2F991C752869705100B4E914 /* JournalView.swift */,
@@ -444,18 +474,28 @@
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
 				2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */,
 				2F1342F728658DA600A5CB9C /* macnivision.xcdatamodeld in Sources */,
+				2F80388A286AEDC4008BF4BF /* MainView.swift in Sources */,
 				2FC7C28928699F730014A95E /* TextField.swift in Sources */,
 				2F991C762869705100B4E914 /* JournalView.swift in Sources */,
+				2F80388B286AEDC4008BF4BF /* OnboardingFeatureView.swift in Sources */,
+				2F803895286AEDE0008BF4BF /* Journal.swift in Sources */,
 				2F991C742869703F00B4E914 /* PetView.swift in Sources */,
 				2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */,
+				2F803896286AEDE0008BF4BF /* Pet.swift in Sources */,
 				2F991C792869706D00B4E914 /* MedicalInfoView.swift in Sources */,
 				2F991C722869700A00B4E914 /* DashboardView.swift in Sources */,
 				2F1342F428658DA600A5CB9C /* Persistence.swift in Sources */,
 				2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */,
 				2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */,
 				2FC7C28D28699FF50014A95E /* Card.swift in Sources */,
+				2F80388D286AEDC4008BF4BF /* OnboardingPetView.swift in Sources */,
+				2F803889286AEDC4008BF4BF /* ContentView2.swift in Sources */,
+				2F80388C286AEDC4008BF4BF /* OnboardingNicknameView.swift in Sources */,
+				2F803893286AEDE0008BF4BF /* User.swift in Sources */,
 				2F1342ED28658DA500A5CB9C /* ContentView.swift in Sources */,
+				2F80388E286AEDC4008BF4BF /* OnboardingView.swift in Sources */,
 				2F1342EB28658DA500A5CB9C /* macnivisionApp.swift in Sources */,
+				2F803894286AEDE0008BF4BF /* Medical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
