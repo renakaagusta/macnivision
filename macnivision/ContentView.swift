@@ -9,11 +9,16 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    
+    @AppStorage("onboarded") var currentUserOnboarded: Bool = false
+   
     var body: some View {
-        DashboardView()
+        
+        if currentUserOnboarded{
+            DashboardView()
+        } else{
+            OnboardingView()
+        }
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {

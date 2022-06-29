@@ -22,10 +22,9 @@ struct AppTextField: View {
                 }
                 TextField(placeholder, text: $field).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 8, maxHeight: 8)
                     .keyboardType(numberInput ? .decimalPad : .default)
-            }.padding().background(Color.white)
+            }.padding()
             Divider()
                 .frame(height: 0.5)
-             .background(isFocus ? Color.primaryColor : Color.gray)
         }
     }
 }

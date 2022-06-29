@@ -16,8 +16,6 @@
 		2F13430128658DA600A5CB9C /* macnivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430028658DA600A5CB9C /* macnivisionTests.swift */; };
 		2F13430B28658DA600A5CB9C /* macnivisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */; };
 		2F13430D28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */; };
-		2F803889286AEDC4008BF4BF /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803883286AEDC4008BF4BF /* ContentView2.swift */; };
-		2F80388A286AEDC4008BF4BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803884286AEDC4008BF4BF /* MainView.swift */; };
 		2F80388B286AEDC4008BF4BF /* OnboardingFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */; };
 		2F80388C286AEDC4008BF4BF /* OnboardingNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */; };
 		2F80388D286AEDC4008BF4BF /* OnboardingPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */; };
@@ -26,16 +24,28 @@
 		2F803894286AEDE0008BF4BF /* Medical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803890286AEDE0008BF4BF /* Medical.swift */; };
 		2F803895286AEDE0008BF4BF /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803891286AEDE0008BF4BF /* Journal.swift */; };
 		2F803896286AEDE0008BF4BF /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803892286AEDE0008BF4BF /* Pet.swift */; };
+		2F80389A286AF3B6008BF4BF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803898286AF3B6008BF4BF /* Color.swift */; };
+		2F80389B286AF3B6008BF4BF /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803899286AF3B6008BF4BF /* GlobalVariables.swift */; };
+		2F80389F286B058B008BF4BF /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80389E286B058B008BF4BF /* Scheme.swift */; };
 		2F991C722869700A00B4E914 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C712869700A00B4E914 /* DashboardView.swift */; };
 		2F991C742869703F00B4E914 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C732869703F00B4E914 /* PetView.swift */; };
-		2F991C762869705100B4E914 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C752869705100B4E914 /* JournalView.swift */; };
-		2F991C792869706D00B4E914 /* MedicalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C782869706D00B4E914 /* MedicalInfoView.swift */; };
+		2F991C792869706D00B4E914 /* MedicalInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C782869706D00B4E914 /* MedicalInfoListView.swift */; };
+		2F99B156286C00080047CD02 /* PsychiatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B155286C00080047CD02 /* PsychiatristCard.swift */; };
+		2F99B15B286C04590047CD02 /* HealtCareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15A286C04590047CD02 /* HealtCareCard.swift */; };
+		2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */; };
+		2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15E286C2FEE0047CD02 /* JournalView.swift */; };
+		2F99B166286C2FEE0047CD02 /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B160286C2FEE0047CD02 /* AddJournalView.swift */; };
+		2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */; };
+		2F99B16A286C3ABD0047CD02 /* DayItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B168286C3ABD0047CD02 /* DayItemCard.swift */; };
+		2F99B16B286C3ABD0047CD02 /* DailyJournalItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */; };
+		2F99B172286C44CC0047CD02 /* PetFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B171286C44CC0047CD02 /* PetFoodBar.swift */; };
+		2F99B174286C45160047CD02 /* HungryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B173286C45160047CD02 /* HungryBar.swift */; };
+		2F99B176286C47FC0047CD02 /* MedicalInfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B175286C47FC0047CD02 /* MedicalInfoDetailView.swift */; };
 		2FC7C28928699F730014A95E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C28828699F730014A95E /* TextField.swift */; };
 		2FC7C28D28699FF50014A95E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C28C28699FF50014A95E /* Card.swift */; };
 		2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2902869A0750014A95E /* ElevatedButton.swift */; };
 		2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2962869A0A90014A95E /* OutlinedButton.swift */; };
 		2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2982869A0D80014A95E /* CircleButton.swift */; };
-		2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */; };
 		2FC7C2A82869A66A0014A95E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A72869A66A0014A95E /* Colors.swift */; };
 		2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A92869A6DA0014A95E /* Strings.swift */; };
 		2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2AC2869A7420014A95E /* AsyncImage.swift */; };
@@ -71,8 +81,6 @@
 		2F13430628658DA600A5CB9C /* macnivisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macnivisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F13430A28658DA600A5CB9C /* macnivisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITests.swift; sourceTree = "<group>"; };
 		2F13430C28658DA600A5CB9C /* macnivisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macnivisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2F803883286AEDC4008BF4BF /* ContentView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
-		2F803884286AEDC4008BF4BF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingFeatureView.swift; sourceTree = "<group>"; };
 		2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingNicknameView.swift; sourceTree = "<group>"; };
 		2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPetView.swift; sourceTree = "<group>"; };
@@ -81,16 +89,28 @@
 		2F803890286AEDE0008BF4BF /* Medical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medical.swift; sourceTree = "<group>"; };
 		2F803891286AEDE0008BF4BF /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		2F803892286AEDE0008BF4BF /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		2F803898286AF3B6008BF4BF /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2F803899286AF3B6008BF4BF /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		2F80389E286B058B008BF4BF /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scheme.swift; path = macnivision/View/Atoms/Scheme.swift; sourceTree = SOURCE_ROOT; };
 		2F991C712869700A00B4E914 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2F991C732869703F00B4E914 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
-		2F991C752869705100B4E914 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
-		2F991C782869706D00B4E914 /* MedicalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoView.swift; sourceTree = "<group>"; };
+		2F991C782869706D00B4E914 /* MedicalInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoListView.swift; sourceTree = "<group>"; };
+		2F99B155286C00080047CD02 /* PsychiatristCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychiatristCard.swift; sourceTree = "<group>"; };
+		2F99B15A286C04590047CD02 /* HealtCareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealtCareCard.swift; sourceTree = "<group>"; };
+		2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDiaryView.swift; sourceTree = "<group>"; };
+		2F99B15E286C2FEE0047CD02 /* JournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalView.swift; path = "../../../../../../../../Downloads/macnivision-feature-journal-tab-view 3/macnivision/View/Pages/JournalView.swift"; sourceTree = "<group>"; };
+		2F99B160286C2FEE0047CD02 /* AddJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
+		2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalView.swift; sourceTree = "<group>"; };
+		2F99B168286C3ABD0047CD02 /* DayItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItemCard.swift; sourceTree = "<group>"; };
+		2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalItemCard.swift; sourceTree = "<group>"; };
+		2F99B171286C44CC0047CD02 /* PetFoodBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetFoodBar.swift; sourceTree = "<group>"; };
+		2F99B173286C45160047CD02 /* HungryBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HungryBar.swift; sourceTree = "<group>"; };
+		2F99B175286C47FC0047CD02 /* MedicalInfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoDetailView.swift; sourceTree = "<group>"; };
 		2FC7C28828699F730014A95E /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2FC7C28C28699FF50014A95E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2FC7C2902869A0750014A95E /* ElevatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatedButton.swift; sourceTree = "<group>"; };
 		2FC7C2962869A0A90014A95E /* OutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedButton.swift; sourceTree = "<group>"; };
 		2FC7C2982869A0D80014A95E /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
-		2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhyscriatristCard.swift; sourceTree = "<group>"; };
 		2FC7C2A72869A66A0014A95E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = macnivision/Colors.swift; sourceTree = SOURCE_ROOT; };
 		2FC7C2A92869A6DA0014A95E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = macnivision/Strings.swift; sourceTree = SOURCE_ROOT; };
 		2FC7C2AC2869A7420014A95E /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
@@ -144,6 +164,7 @@
 		2F1342E928658DA500A5CB9C /* macnivision */ = {
 			isa = PBXGroup;
 			children = (
+				2F803897286AF3A3008BF4BF /* Helpers */,
 				2F803882286AEDB2008BF4BF /* Model */,
 				2F991C4B2869680C00B4E914 /* Constant */,
 				2F991C4A286967EF00B4E914 /* ViewModel */,
@@ -195,6 +216,73 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2F803897286AF3A3008BF4BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F803898286AF3B6008BF4BF /* Color.swift */,
+				2F803899286AF3B6008BF4BF /* GlobalVariables.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2F80389C286AF47D008BF4BF /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2F8038A0286B064F008BF4BF /* Fragment */,
+				2F803888286AEDC4008BF4BF /* OnboardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		2F80389D286AF491008BF4BF /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2F8038A3286B067E008BF4BF /* Pet */,
+				2F8038A2286B0672008BF4BF /* MedicalInfo */,
+				2F8038A1286B0666008BF4BF /* Journal */,
+				2F991C712869700A00B4E914 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		2F8038A0286B064F008BF4BF /* Fragment */ = {
+			isa = PBXGroup;
+			children = (
+				2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */,
+				2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */,
+				2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */,
+			);
+			path = Fragment;
+			sourceTree = "<group>";
+		};
+		2F8038A1286B0666008BF4BF /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B160286C2FEE0047CD02 /* AddJournalView.swift */,
+				2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */,
+				2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */,
+				2F99B15E286C2FEE0047CD02 /* JournalView.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		2F8038A2286B0672008BF4BF /* MedicalInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2F991C782869706D00B4E914 /* MedicalInfoListView.swift */,
+				2F99B175286C47FC0047CD02 /* MedicalInfoDetailView.swift */,
+			);
+			path = MedicalInfo;
+			sourceTree = "<group>";
+		};
+		2F8038A3286B067E008BF4BF /* Pet */ = {
+			isa = PBXGroup;
+			children = (
+				2F991C732869703F00B4E914 /* PetView.swift */,
+			);
+			path = Pet;
+			sourceTree = "<group>";
+		};
 		2F991C432869679800B4E914 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +320,7 @@
 			children = (
 				2FC7C2A72869A66A0014A95E /* Colors.swift */,
 				2FC7C2A92869A6DA0014A95E /* Strings.swift */,
+				2F80389E286B058B008BF4BF /* Scheme.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -239,7 +328,8 @@
 		2F991C7F28697E4200B4E914 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				2FC7C2A02869A14C0014A95E /* JournalCard */,
+				2F99B16D286C3B900047CD02 /* DayItemCard */,
+				2F99B16C286C3AC20047CD02 /* DailyJournalItemCard */,
 				2FC7C29F2869A1440014A95E /* HospitalCard */,
 				2FC7C29E2869A1330014A95E /* PhysciatristCard */,
 			);
@@ -247,19 +337,52 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		2F99B16C286C3AC20047CD02 /* DailyJournalItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */,
+			);
+			path = DailyJournalItemCard;
+			sourceTree = "<group>";
+		};
+		2F99B16D286C3B900047CD02 /* DayItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B168286C3ABD0047CD02 /* DayItemCard.swift */,
+			);
+			path = DayItemCard;
+			sourceTree = "<group>";
+		};
+		2F99B16E286C44850047CD02 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B170286C44950047CD02 /* PetFoodBar */,
+				2F99B16F286C448C0047CD02 /* HungryBar */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
+		2F99B16F286C448C0047CD02 /* HungryBar */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B173286C45160047CD02 /* HungryBar.swift */,
+			);
+			path = HungryBar;
+			sourceTree = "<group>";
+		};
+		2F99B170286C44950047CD02 /* PetFoodBar */ = {
+			isa = PBXGroup;
+			children = (
+				2F99B171286C44CC0047CD02 /* PetFoodBar.swift */,
+			);
+			path = PetFoodBar;
+			sourceTree = "<group>";
+		};
 		2FC7C25E28699B390014A95E /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				2F803883286AEDC4008BF4BF /* ContentView2.swift */,
-				2F803884286AEDC4008BF4BF /* MainView.swift */,
-				2F803885286AEDC4008BF4BF /* OnboardingFeatureView.swift */,
-				2F803886286AEDC4008BF4BF /* OnboardingNicknameView.swift */,
-				2F803887286AEDC4008BF4BF /* OnboardingPetView.swift */,
-				2F803888286AEDC4008BF4BF /* OnboardingView.swift */,
-				2F991C712869700A00B4E914 /* DashboardView.swift */,
-				2F991C732869703F00B4E914 /* PetView.swift */,
-				2F991C752869705100B4E914 /* JournalView.swift */,
-				2F991C782869706D00B4E914 /* MedicalInfoView.swift */,
+				2F80389D286AF491008BF4BF /* Dashboard */,
+				2F80389C286AF47D008BF4BF /* OnBoarding */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -267,6 +390,7 @@
 		2FC7C25F28699C600014A95E /* Moleculs */ = {
 			isa = PBXGroup;
 			children = (
+				2F99B16E286C44850047CD02 /* Bar */,
 				2F991C7F28697E4200B4E914 /* Card */,
 			);
 			path = Moleculs;
@@ -312,7 +436,7 @@
 		2FC7C29E2869A1330014A95E /* PhysciatristCard */ = {
 			isa = PBXGroup;
 			children = (
-				2FC7C2A12869A2D90014A95E /* PhyscriatristCard.swift */,
+				2F99B155286C00080047CD02 /* PsychiatristCard.swift */,
 			);
 			path = PhysciatristCard;
 			sourceTree = "<group>";
@@ -320,15 +444,9 @@
 		2FC7C29F2869A1440014A95E /* HospitalCard */ = {
 			isa = PBXGroup;
 			children = (
+				2F99B15A286C04590047CD02 /* HealtCareCard.swift */,
 			);
 			path = HospitalCard;
-			sourceTree = "<group>";
-		};
-		2FC7C2A02869A14C0014A95E /* JournalCard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JournalCard;
 			sourceTree = "<group>";
 		};
 		2FC7C2AB2869A7320014A95E /* Image */ = {
@@ -469,33 +587,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC7C2A22869A2D90014A95E /* PhyscriatristCard.swift in Sources */,
 				2FC7C2A82869A66A0014A95E /* Colors.swift in Sources */,
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
+				2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */,
 				2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */,
+				2F99B15B286C04590047CD02 /* HealtCareCard.swift in Sources */,
+				2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */,
+				2F80389F286B058B008BF4BF /* Scheme.swift in Sources */,
+				2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */,
 				2F1342F728658DA600A5CB9C /* macnivision.xcdatamodeld in Sources */,
-				2F80388A286AEDC4008BF4BF /* MainView.swift in Sources */,
+				2F80389B286AF3B6008BF4BF /* GlobalVariables.swift in Sources */,
 				2FC7C28928699F730014A95E /* TextField.swift in Sources */,
-				2F991C762869705100B4E914 /* JournalView.swift in Sources */,
 				2F80388B286AEDC4008BF4BF /* OnboardingFeatureView.swift in Sources */,
+				2F80389A286AF3B6008BF4BF /* Color.swift in Sources */,
 				2F803895286AEDE0008BF4BF /* Journal.swift in Sources */,
 				2F991C742869703F00B4E914 /* PetView.swift in Sources */,
+				2F99B172286C44CC0047CD02 /* PetFoodBar.swift in Sources */,
 				2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */,
 				2F803896286AEDE0008BF4BF /* Pet.swift in Sources */,
-				2F991C792869706D00B4E914 /* MedicalInfoView.swift in Sources */,
+				2F99B156286C00080047CD02 /* PsychiatristCard.swift in Sources */,
+				2F991C792869706D00B4E914 /* MedicalInfoListView.swift in Sources */,
 				2F991C722869700A00B4E914 /* DashboardView.swift in Sources */,
 				2F1342F428658DA600A5CB9C /* Persistence.swift in Sources */,
+				2F99B176286C47FC0047CD02 /* MedicalInfoDetailView.swift in Sources */,
 				2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */,
 				2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */,
+				2F99B174286C45160047CD02 /* HungryBar.swift in Sources */,
 				2FC7C28D28699FF50014A95E /* Card.swift in Sources */,
 				2F80388D286AEDC4008BF4BF /* OnboardingPetView.swift in Sources */,
-				2F803889286AEDC4008BF4BF /* ContentView2.swift in Sources */,
 				2F80388C286AEDC4008BF4BF /* OnboardingNicknameView.swift in Sources */,
+				2F99B16B286C3ABD0047CD02 /* DailyJournalItemCard.swift in Sources */,
+				2F99B166286C2FEE0047CD02 /* AddJournalView.swift in Sources */,
 				2F803893286AEDE0008BF4BF /* User.swift in Sources */,
 				2F1342ED28658DA500A5CB9C /* ContentView.swift in Sources */,
 				2F80388E286AEDC4008BF4BF /* OnboardingView.swift in Sources */,
 				2F1342EB28658DA500A5CB9C /* macnivisionApp.swift in Sources */,
 				2F803894286AEDE0008BF4BF /* Medical.swift in Sources */,
+				2F99B16A286C3ABD0047CD02 /* DayItemCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
