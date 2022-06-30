@@ -8,4 +8,4 @@
 import Foundation
 import SwiftUI
 
-var scheme = ColorScheme.light
+var scheme = ColorScheme.dark
