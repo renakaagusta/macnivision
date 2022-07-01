@@ -7,18 +7,28 @@
 
 import SwiftUI
 
-struct AppCard: View {
+struct AppCard<Content: View>: View {
     @State var width: CGFloat = 300
     @State var height: CGFloat = 300
     @State var cornerRadius: CGFloat = 20
-    @State var content: AnyView?
-    @State var backgroundColor: Color = Color.white
+    @State var backgroundColor: Color = Color.clear
     @State var borderColor: Color = Color.gray
+    @State var background: Image?
+    var content: () -> Content
+    
+    init(width: CGFloat = 300, height: CGFloat = 300, cornerRadius: CGFloat = 20, backgroundColor: Color = Color.clear, borderColor: Color = Color.white, @ViewBuilder content: @escaping () -> Content) {
+        self.width = width
+        self.height = height
+        self.cornerRadius = cornerRadius
+        self.backgroundColor = backgroundColor
+        self.borderColor = borderColor
+        self.content = content
+    }
     
     var body: some View {
         VStack(){
             if (content != nil) {
-                content
+                content()
             }
         }.frame(width: width, height: height).overlay(
             RoundedRectangle(cornerRadius: cornerRadius)
@@ -29,7 +39,7 @@ struct AppCard: View {
 
 struct AppCard_Previews: PreviewProvider {
     static var previews: some View {
-        AppCard()
+        AppCard(content: {VStack{}})
     }
 }
 
