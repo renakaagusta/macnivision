@@ -24,13 +24,14 @@ struct PsychiatristCard: View {
     var body: some View {
         AppCard(width: width, height: 100, borderColor: Color.primaryColor, content: {
             HStack{
-                Image("Psychiatrist").resizable().frame(width: 80, height: 80)
+                Image("Psychiatrist").resizable().frame(width: 80, height: 80).cornerRadius(10)
+                Spacer().frame(width: 10)
                 VStack(alignment: .leading){
                     Text(psychiatrist.name).fontWeight(.semibold)
                     Spacer().frame(height:5)
                     Text("Psychiatrist").fontWeight(.light).foregroundColor(.gray).font(.system(size: 14))
-                }
-            }
+                }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44, alignment: .leading)
+            }.padding()
         })
     }
 }
