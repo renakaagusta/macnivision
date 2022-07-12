@@ -21,14 +21,14 @@ struct PetFoodBar: View {
                     .frame(width: petFoodContainerWidth, height: petFoodContainerHeight)
                 .foregroundColor(Color.black.opacity(0.2))
                 HStack(spacing: 10) {
-                    Image("coin")
+                    Image("Pet Food Bowl")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
+                        .frame(width: 40, height: 30)
                         //.font(.system(size: 20))
                     
                     Text("\(totalPetFood)")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
                         .bold()
                 }
             }

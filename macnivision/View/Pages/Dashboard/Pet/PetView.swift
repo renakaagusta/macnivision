@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PetView: View {
+    
     @State var hungryPercent: CGFloat = 0
     @State var currentHungryPercent: CGFloat = 0
     @State var totalFood: CGFloat = 100
@@ -15,23 +16,35 @@ struct PetView: View {
     @State private var counter = 0
     var foodBonus: CGFloat = 25
     
-    @State var isDog:Bool = false
+    @State var petChecker: String
+    @State var isDog:Bool
     @State var isHungry:Bool = false
     @State var isEat:Bool = false
     @State var isTap:Bool = false
     @State var showDialogueBox:Bool = false
     
+    
+    
     var colorHungryBarMin = Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))
     var colorHungryBarMax = Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
     
-    let listDialogue = ["Hello User, Have a nice day!", "Do you want to play with me?", "Hehe, you love to touch my head aren't you?", "My body sure is fluffy"]
+    static let listDialogue = ["Hello User, Have a nice day!", "Do you want to play with me?", "Hehe, you love to touch my head aren't you?", "My body sure is fluffy"]
     
-    let randomizeDialogue: String
+    @State var randomizeDialogue: String
     
     init() {
-        self.randomizeDialogue = listDialogue.randomElement()!
+        self.randomizeDialogue = PetView.listDialogue.randomElement()!
+          
+        self.petChecker = GlobalVariables.global.selectedPet
+        self.isDog = false
+        
+        if petChecker == "dog" {
+            isDog = true
+        } else {
+            self.isDog = false
+        }
     }
-
+    
     var body: some View {
         
         var timer = Timer.publish(every:1, tolerance: 0.5, on: .main, in: .common).autoconnect()
@@ -67,10 +80,10 @@ struct PetView: View {
                                     }
                                 }
                                 
-                            //Text("Food Level : \(Int(hungryPercent))%")
+                            //Text("Food Level : \(CGFloat(hungryPercent))%")
                             Text("Hungry Level")
                                     .offset(y:20)
-                                    .font(.system(size: 20, weight: .bold))
+                                    .font(.system(size: 18, weight: .bold))
                         }
                         
                         PetFoodBar(totalPetFood: Int(totalFood), petFoodContainerWidth: 100, petFoodContainerHeight: 30)
@@ -78,17 +91,17 @@ struct PetView: View {
                         
                     }
                     Spacer()
-                    VStack {
-                        Button(action: {isDog.toggle()}) {
-                            if isDog == true {
-                                Text("Cat")
-                            } else {
-                                Text("Dog")
-                            }
-                        }
-                        //.offset(y:50)
-                        
-                    }
+//                    VStack {
+//                        Button(action: {isDog.toggle()}) {
+//                            if isDog == true {
+//                                Text("Cat")
+//                            } else {
+//                                Text("Dog")
+//                            }
+//                        }
+//                        //.offset(y:50)
+//
+//                    }
                     Button(action: {touchPet()}) {
                         VStack(spacing : 0) {
                             ZStack {
@@ -106,29 +119,31 @@ struct PetView: View {
                                         
                                         Text(randomizeDialogue)
                                             .font(.system(size: 15, weight: .bold))
-                                            .offset(x: 75)
+                                            .offset(x: 75, y: -5)
                                             .frame(width: 150, height: 80, alignment: .center)
                                     }
                                 }
                             }
                             
                             ZStack {
-                                
-                                Image("Cat (smile)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 350, height: 350)
-                                    .font(.system(size: 15))
-                                    .offset(x:15, y:50)
-                                    .opacity(isDog ?  0 : 1)
-                                
-                                Image("Dog (smile)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 350, height: 350)
-                                    .font(.system(size: 15))
-                                    .offset(x:15, y:50)
-                                    .opacity(isDog ? 1 : 0)
+                                switch isDog {
+                                    case false:
+                                        Image("Cat (smile)")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 350, height: 350)
+                                            .font(.system(size: 15))
+                                            .offset(x:15, y:50)
+                                    
+                                    
+                                    default:
+                                        Image("Dog (smile)")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 350, height: 350)
+                                            .font(.system(size: 15))
+                                            .offset(x:15, y:50)
+                                }
                             }
                         }
                     }.animation(nil)
@@ -148,20 +163,39 @@ struct PetView: View {
     }
     
     func touchPet() {
-        self.showDialogueBox = false
+        var touchCounter = 0
+        randomizeDialogue = Self.listDialogue.randomElement()!
+        
         self.showDialogueBox = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5)
-            {self.showDialogueBox = false}
+        self.isEat = true
+        touchCounter += 1
+        
+        let task = DispatchWorkItem {
+            self.showDialogueBox = false
+            self.isEat = false
+            touchCounter = 0
+        }
+//        let doTouchPet = DispatchWorkItem(block: {
+//            self.showDialogueBox = true
+//            self.isEat = true
+//        })
+//        doTouchPet.cancel()
+        
+        if touchCounter > 1 {
+            task.cancel()
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
+        }
     }
     
     func decreaseHungryBar() {
         if hungryPercent > 0 {
             if   currentHungryPercent - hungryPercent > 0 {
-                isHungry == false
+                isHungry = false
                 
                 return
             } else {
-                hungryPercent -= 4.16
+                hungryPercent -= 0.0416
                 currentHungryPercent = hungryPercent
                 counter = 0
             }
@@ -169,7 +203,7 @@ struct PetView: View {
             hungryPercent = 0
             currentHungryPercent = 0
             counter = 0
-            isHungry == true
+            isHungry = true
         }
     }
     
