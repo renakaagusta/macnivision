@@ -61,6 +61,6 @@ struct DailyJournalView: View {
 
 struct DailyJournalView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyJournalView(date: "22", month: "JUNE", year: "2022")
+        DailyJournalView(date: "22", month: "JUNE", year: "2022").preferredColorScheme(scheme)
     }
 }

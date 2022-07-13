@@ -192,6 +192,6 @@ struct PetView: View {
 
 struct PetView_Previews: PreviewProvider {
     static var previews: some View {
-        PetView()
+        PetView().preferredColorScheme(scheme)
     }
 }
