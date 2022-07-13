@@ -8,9 +8,11 @@
 import Foundation
 
 
-class PetGlobalVariable {
+final class PetGlobalVariable: ObservableObject {
     
     static let petGlobal = PetGlobalVariable()
     
-    var petFoodAmount: Int = 100
+    @Published var hungryLevel: Float = 0.0
+    @Published var petFoodAmount: Int = 0
+    
 }

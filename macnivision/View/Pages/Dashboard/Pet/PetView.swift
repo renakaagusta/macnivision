@@ -9,11 +9,13 @@ import SwiftUI
 
 struct PetView: View {
     
-    @State var hungryPercent: CGFloat = 0
-    @State var currentHungryPercent: CGFloat = 0
+    @ObservedObject var globalPet = PetGlobalVariable.petGlobal
+    
+    @State var hungryPercent: Float = PetGlobalVariable.petGlobal.hungryLevel
+    @State var currentHungryPercent: Float = 0
     @State private var counter = 0
     @State var totalFood: Int = PetGlobalVariable.petGlobal.petFoodAmount
-    var foodBonus: CGFloat = 25
+    var foodBonus: CGFloat = 1
     
     @State var petChecker: String
     @State var isDog:Bool
@@ -26,18 +28,26 @@ struct PetView: View {
     var colorHungryBarMin = Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))
     var colorHungryBarMax = Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
     
-    static let listDialogue = ["Hello User, Have a nice day!", "Do you want to play with me?", "Hehe, you love to touch my head aren't you?", "My body sure is fluffy"]
+    static let listDialogue = ["Hi... Have a nice day!", "Do you want to play with me?", "Hehe, you love to touch my head aren't you?", "My body sure is fluffy"]
+    static let listFeedDialogue = ["Yummy!!!", "Taste so good", "Yum yum...", "Yayy eat...", "Thanks for feeding me"]
     
     @State var randomizeDialogue: String
+    @State var randomizeFeedDialogue: String
+    
+//    var Cat = Pet(id: <#T##Int#>, recordId: <#T##String#>, userId: <#T##Int#>, hungryLevel: PetView.hungry hungryPercent, foodAmount: totalFood, typePet: <#T##Pet.TypePet#>)
+//    
+//    var Dog = Pet(id: <#T##Int#>, recordId: <#T##String#>, userId: <#T##Int#>, hungryLevel: <#T##Float#>, foodAmount: <#T##Int#>, typePet: <#T##Pet.TypePet#>)
+
     
     init() {
         self.randomizeDialogue = PetView.listDialogue.randomElement()!
+        self.randomizeFeedDialogue = PetView.listFeedDialogue.randomElement()!
           
         self.petChecker = GlobalVariables.global.selectedPet
         self.isDog = false
         
         if petChecker == "dog" {
-            isDog = true
+            self.isDog = true
         } else {
             self.isDog = false
         }
@@ -63,7 +73,7 @@ struct PetView: View {
                 //Spacer()
                 HStack(spacing: 10) {
                     ZStack {
-                        HungryBar(hungryBarWidth: 220, hungryBarHeight: 30, hungryBarCornerRadious: 20, hungryPercentage: hungryPercent, gradientColorLeft: colorHungryBarMin, gradientColorRight: colorHungryBarMax)
+                        HungryBar(hungryBarWidth: 220, hungryBarHeight: 30, hungryBarCornerRadious: 20, hungryPercentage: CGFloat(hungryPercent), gradientColorLeft: colorHungryBarMin, gradientColorRight: colorHungryBarMax)
                             .offset(y:20)
                             .animation(.spring())
                             .onReceive(timer) {
@@ -92,48 +102,38 @@ struct PetView: View {
                             Button(action: {touchPet()}) {
                                 VStack(spacing : 0) {
                                     ZStack {
+                                        //Abaikan
                                         Image("dialoguebox short")
                                             .resizable()
                                             .frame(width: 350, height: 100)
                                             .offset(x: 75)
                                             .opacity(0)
+                                        
+                                        //dialog pet touch
                                         if showDialogueBox {
                                             ZStack {
+                                                //Dialogue box
                                                 Image("dialoguebox short")
                                                     .resizable()
                                                     .frame(width: 200, height: 100)
-                                                    .offset(x: 75)
+                                                    .offset(x: 75, y:50)
                                                 
+                                                //Text dialogue
                                                 Text(randomizeDialogue)
                                                     .font(.system(size: 15, weight: .bold))
-                                                    .offset(x: 75, y: -5)
+                                                    .offset(x: 75, y: 47)
                                                     .frame(width: 150, height: 80, alignment: .center)
+                                                    .multilineTextAlignment(.center)
                                             }
                                         }
-                                        Image("Cat (hungry)") //gak kepake, biar button nya segede pet nya aja
+                                        Image("Cat hungry") //gak kepake, biar button nya segede pet nya aja
                                             .resizable()
                                             .frame(width: 350, height: 100)
                                             .offset(x: 75)
                                             .opacity(0)
                                     }
                                     switch isDog {
-                                        case false:
-                                            if isTap == true  {
-                                                Image("Cat pat")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: 350, height: 350)
-                                                    .font(.system(size: 15))
-                                                    .offset(x:15, y:50)
-                                            } else if isHungry == false || isTap == false {
-                                                Image("Cat normal")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: 350, height: 350)
-                                                    .font(.system(size: 15))
-                                                    .offset(x:15, y:50)
-                                            }
-                                        default:
+                                        case true:
                                             if isTap == true  {
                                                 Image("Dog pat")
                                                     .resizable()
@@ -143,6 +143,22 @@ struct PetView: View {
                                                     .offset(x:15, y:50)
                                             } else if isHungry == false || isTap == false {
                                                 Image("Dog normal")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 350, height: 350)
+                                                    .font(.system(size: 15))
+                                                    .offset(x:15, y:50)
+                                            }
+                                        default:
+                                            if isTap == true  {
+                                                Image("Cat pat")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 350, height: 350)
+                                                    .font(.system(size: 15))
+                                                    .offset(x:15, y:50)
+                                            } else if isHungry == false || isTap == false {
+                                                Image("Cat normal")
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 350, height: 350)
@@ -160,18 +176,46 @@ struct PetView: View {
                                 
                                 ZStack {
                                     switch isDog {
-                                        case false:
+                                        case true:
                                             if isEat == true  {
-                                                Image("Cat eating")
+                                                ZStack {
+                                                    //Dialogue box maem
+                                                    Image("dialoguebox short")
+                                                        .resizable()
+                                                        .frame(width: 200, height: 100)
+                                                        .offset(x: 75, y: -300)
+                                                    
+                                                    //Text dialogue
+                                                    Text(randomizeFeedDialogue)
+                                                        .font(.system(size: 15, weight: .bold))
+                                                        .offset(x: 75, y: -505)
+                                                        .frame(width: 150, height: 80, alignment: .center)
+                                                        .multilineTextAlignment(.center)
+                                                }
+                                                Image("Dog eating")
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 350, height: 350)
                                                     .font(.system(size: 15))
-                                                    .offset(x:15, y:-260)
+                                                    .offset(x:75, y:-505)
                                             }
                                         default:
                                             if isEat == true  {
-                                                Image("Dog eating")
+                                                ZStack {
+                                                    //Dialogue box laper
+                                                    Image("dialoguebox short")
+                                                        .resizable()
+                                                        .frame(width: 200, height: 100)
+                                                        .offset(x: 75, y: -500)
+                                                    
+                                                    //Text dialogue laper
+                                                    Text(randomizeFeedDialogue)
+                                                        .font(.system(size: 15, weight: .bold))
+                                                        .offset(x: 75, y: -505)
+                                                        .frame(width: 150, height: 80, alignment: .center)
+                                                        .multilineTextAlignment(.center)
+                                                }
+                                                Image("Cat eating")
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 350, height: 350)
@@ -186,16 +230,30 @@ struct PetView: View {
                                 }
                             }.offset(y: 180)
                             if isHungry == true {
+                                ZStack {
+                                    //Dialogue box
+                                    Image("dialoguebox short")
+                                        .resizable()
+                                        .frame(width: 200, height: 100)
+                                        .offset(x: 75, y: -300)
+                                    
+                                    //Text dialogue
+                                    Text("I'm Hungry, please feed me")
+                                        .font(.system(size: 15, weight: .bold))
+                                        .offset(x: 75, y: -302)
+                                        .frame(width: 150, height: 80, alignment: .center)
+                                        .multilineTextAlignment(.center)
+                                }
                                 switch isDog {
-                                    case false:
-                                        Image("Cat hungry")
+                                    case true:
+                                        Image("Dog hungry")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 350, height: 350)
                                             .font(.system(size: 15))
                                             .offset(x:15, y:-80)
                                     default:
-                                        Image("Dog hungry")
+                                        Image("Cat hungry")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 350, height: 350)
@@ -223,11 +281,6 @@ struct PetView: View {
             touchCounter = 0
             self.isTap = false
         }
-//        let doTouchPet = DispatchWorkItem(block: {
-//            self.showDialogueBox = true
-//            self.isEat = true
-//        })
-//        doTouchPet.cancel()
         
         if touchCounter > 1 {
             task.cancel()
@@ -256,20 +309,22 @@ struct PetView: View {
     
     func foodButtonPressed() {
         //hungryPercent = CGFloat.random(in: 1...100)
-        self.isEat = true
-        self.isHungry = false
-        
+        randomizeFeedDialogue = Self.listFeedDialogue.randomElement()!
         let task = DispatchWorkItem {
             self.isEat = false
         }
         
         if(hungryPercent != 100 && totalFood > 0 ) {
-            if(hungryPercent + foodBonus > 100) {
+            
+            self.isEat = true
+            self.isHungry = false
+            if(hungryPercent + Float(foodBonus) > 100) {
+                
                 hungryPercent = 100
                 totalFood -= 1
 //                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
             } else {
-                hungryPercent += foodBonus
+                hungryPercent += Float(foodBonus)
                 totalFood -= 1
 //                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
             }

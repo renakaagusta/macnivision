@@ -18,4 +18,5 @@ struct Pet: Hashable, Codable, Identifiable{
         case cat = "cat"
         case dog = "dog"
     }
+    
 }
