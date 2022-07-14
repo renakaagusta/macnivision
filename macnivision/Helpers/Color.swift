@@ -11,6 +11,11 @@ import Foundation
 import SwiftUI
 
 let greenbutton = Color("07A88A")
+let greenbackground = Color("ADC9C3")
+let greenFont = Color("095627")
+let whitecolor = Color("#FFFFFF")
+let softgreenbackground = Color("#eafaf3")
+let softgraybackground = Color("F2F2F7")
 
 extension Color {
   init?(_ hex: String) {

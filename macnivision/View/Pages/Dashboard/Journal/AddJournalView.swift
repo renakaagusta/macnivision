@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct AddJournalView: View {
-    @ObservedObject var global = GlobalVariables.global
+    @EnvironmentObject var addJournalViewModel: JournalAddViewModel
+    @Environment(\.self) var env
+    
     @FocusState var isInputActive: Bool
+    @State var isAngrySelected: Bool = false
+    @State var isSadSelected: Bool = false
+    @State var isWorrySelected: Bool = false
+    @State var isSurprisedSelected: Bool = false
+    @State var isHappySelected: Bool = false
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
     
     var body: some View {
         ZStack{
-            Color.greenbackground
+            greenbackground
                 .ignoresSafeArea()
             VStack{
                 ZStack{
@@ -26,8 +35,8 @@ struct AddJournalView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.gray)
                             
-                            Text("\(global.emotion)")
-                                .fontWeight(.bold)
+                            Text("\(addJournalViewModel.emotion.map{String($0)}.joined(separator: ", "))")
+                                .fontWeight(.semibold)
                                 .foregroundColor(Color.black)
                             
                             Spacer()
@@ -35,16 +44,119 @@ struct AddJournalView: View {
                         
                         
                         HStack{
-                            emotionButton(emotionType: "Angry")
-                            emotionButton(emotionType: "Sad")
-                            emotionButton(emotionType: "Worry")
-                            emotionButton(emotionType: "Surprised")
-                            emotionButton(emotionType: "Happy")
+                            
+                            Group{
+                                VStack{
+                                    Button{
+                                        isAngrySelected = !isAngrySelected
+                                        if isAngrySelected{
+                                            if addJournalViewModel.emotion.count<2{
+                                                addJournalViewModel.emotion += ["Angry"]
+                                            } else{
+                                                showAlert(title: "sorry you can only choose 2 emotions :'(")
+                                            }
+                                            
+                                        } else{
+                                            addJournalViewModel.emotion = addJournalViewModel.emotion.filter(){$0 != "Angry"}
+                                        }
+                                    }
+                                    label:{
+                                        Image("Angry")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
+                                
+                                VStack{
+                                    Button{
+                                        isSadSelected = !isSadSelected
+                                        if isSadSelected{
+                                            if addJournalViewModel.emotion.count<2{
+                                                addJournalViewModel.emotion += ["Sad"]
+                                            } else{
+                                                showAlert(title: "sorry you can only choose 2 emotions :'(")
+                                            }
+                                        } else{
+                                            addJournalViewModel.emotion = addJournalViewModel.emotion.filter(){$0 != "Sad"}
+                                        }
+                                    }
+                                    label:{
+                                        Image("Sad")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
+                                
+                                VStack{
+                                    Button{
+                                        isWorrySelected = !isWorrySelected
+                                        if isWorrySelected{
+                                            if addJournalViewModel.emotion.count<2{
+                                                addJournalViewModel.emotion += ["Worry"]
+                                            } else{
+                                                showAlert(title: "sorry you can only choose 2 emotions :'(")
+                                            }
+                                        } else{
+                                            addJournalViewModel.emotion = addJournalViewModel.emotion.filter(){$0 != "Worry"}
+                                        }
+                                    }
+                                    label:{
+                                        Image("Worry")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
+                                
+                                VStack{
+                                    Button{
+                                        isHappySelected = !isHappySelected
+                                        if isHappySelected{
+                                            if addJournalViewModel.emotion.count<2{
+                                                addJournalViewModel.emotion += ["Happy"]
+                                            } else{
+                                                showAlert(title: "sorry you can only choose 2 emotions :'(")
+                                            }
+                                        } else{
+                                            addJournalViewModel.emotion = addJournalViewModel.emotion.filter(){$0 != "Happy"}
+                                        }
+                                    }
+                                    label:{
+                                        Image("Happy")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
+                                
+                                VStack{
+                                    Button{
+                                        isSurprisedSelected = !isSurprisedSelected
+                                        if isSurprisedSelected{
+                                            if addJournalViewModel.emotion.count<2{
+                                                addJournalViewModel.emotion += ["Surprised"]
+                                            } else{
+                                                showAlert(title: "sorry you can only choose 2 emotions :'(")
+                                            }
+                                        } else{
+                                            addJournalViewModel.emotion = addJournalViewModel.emotion.filter(){$0 != "Surprised"}
+                                        }
+                                    }
+                                    label:{
+                                        Image("Surprised")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
+                                
+                            }
+                            
                         }
                     }
                 }
                 .frame(width: 350, height: 118)
                 .padding(.horizontal)
+                .alert(isPresented: $showAlert, content: {
+                    return Alert(title: Text(alertTitle))
+            })
 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20.0)
@@ -61,7 +173,7 @@ struct AddJournalView: View {
                             Spacer()
                         }
                         
-                        TextEditor(text: $global.diary)
+                        TextEditor(text: $addJournalViewModel.diary)
                             .padding(.horizontal)
                             .font(.headline)
                             .frame(height: 159)
@@ -98,7 +210,7 @@ struct AddJournalView: View {
                             Spacer()
                         }
                         
-                        TextEditor(text: $global.notes)
+                        TextEditor(text: $addJournalViewModel.note)
                             .padding(.horizontal)
                             .font(.headline)
                             .frame(height: 159)
@@ -124,42 +236,43 @@ struct AddJournalView: View {
                     Spacer()
                     doneButton
                 }
+                .alert(isPresented: $showAlert, content: {
+                        return Alert(title: Text(alertTitle))
+                })
                 
                 Spacer()
             }
         }
         .navigationBarTitle(Text(Date.now, format: .dateTime.day().month().year()))
         .navigationBarTitleDisplayMode(.inline)
+        
+    }
+    
+    func showAlert(title: String){
+        alertTitle =  title
+        showAlert.toggle()
     }
 }
 
 struct AddJournalView_Previews: PreviewProvider {
     static var previews: some View {
         AddJournalView()
+            .environmentObject(JournalAddViewModel())
     }
 }
 
-struct emotionButton: View{
-    @ObservedObject var global = GlobalVariables.global
-    
-    var emotionType: String
-    var body: some View{
-        Button{
-            global.emotion = emotionType
-        }
-        label:{
-            Image(emotionType)
-                .resizable()
-                .frame(width: 50, height: 50)
-        }
-    }
-}
 
 extension AddJournalView{
     
     private var doneButton: some View{
         Button{
-            //mainView()
+            if addJournalViewModel.diary.count < 5{
+                showAlert(title: "you haven't describe your emotion")
+            }
+            else{
+                //this should be a place to add data
+                addJournalViewModel.entryDate = Date()
+            }
         }
         label:{
             Text("Done")
@@ -171,3 +284,13 @@ extension AddJournalView{
         }
     }
 }
+
+extension Array where Element: Equatable {
+    // Remove first collection element that is equal to the given `object`:
+    mutating func remove(object: Element) {
+        guard let index = firstIndex(of: object) else {return}
+        remove(at: index)
+    }
+
+}
+

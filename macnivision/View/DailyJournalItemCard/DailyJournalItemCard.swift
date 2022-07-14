@@ -7,15 +7,9 @@
 
 import SwiftUI
 
-struct CardDailyJournalItem: View {
-    @State var time: String
-    @State var date: String
-    @State var month: String
-    @State var year: String
-    
-    @State var emotion: String
-    @State var diary: String
-    @State var notes: String
+struct DailyJournalItemCard: View {
+    var journalItem: JournalDummy
+    var journalId: Int
     
     @State var showDetailDiary = false
     
@@ -27,52 +21,44 @@ struct CardDailyJournalItem: View {
                 .background(.white)
             
             HStack{
-                Image(emotion)
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                
-                Divider()
-                
                 VStack{
                     HStack{
-                        Text(time)
+                        HStack{
+                            ForEach(journalItem.emotion, id:\.self) { value in
+                                Image(value)
+                                    .resizable()
+                                    .frame(width: 27, height: 27)
+                            }
+                        }
+                        
+                        Spacer()
+                        Text("\(journalItem.entryDate.formatted(date: .omitted, time: .shortened))")
                             .font(.headline)
                             .fontWeight(.bold)
-                            .foregroundColor(.black)
-                        Spacer()
+                            .foregroundColor(.gray)
                     }
-                    
-                    Text(diary)
+                    Text(journalItem.diary)
                         .font(.caption)
                         .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
                         
                 }
-                .frame(width: 250, height: 105)
+                .padding(.horizontal)
+                .frame(width: 357, height: 105)
             }
         }
         .onTapGesture {
             self.showDetailDiary.toggle()
         }
         .sheet(isPresented: $showDetailDiary){
-            DetailDiaryView(time: time,
-                            date: date,
-                            month: month,
-                            year: year,
-                            emotion: emotion,
-                            diary: diary,
-                            notes: notes)
+            DetailDiaryView(journalItem: GetJournalModelView().journals[journalId])
         }
     }
 }
 
 struct CardDailyJournalItem_Previews: PreviewProvider {
     static var previews: some View {
-        CardDailyJournalItem(time: "14:00",
-                             date: "22",
-                             month: "JUNE",
-                             year: "2022",
-                             emotion: "Sad",
-                             diary: "Aku lagi ada masalah di tempat kerja. I’m so stressedddd goshhh mana pas nyampe ban motor pecah punn semoga mood ku tetap terjaga dah. huhuhu …",
-                             notes: "Karena lagi pusing banget aku cuma berharap hari ini bisa berakhir dengan baik, sambil mencari solusi juga, hopefully aku nggak overthinking")
+        DailyJournalItemCard(journalItem: GetJournalModelView().journals[0], journalId: 0)
     }
 }
+

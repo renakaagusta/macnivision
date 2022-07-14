@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct DetailDiaryView: View {
-    @State var time: String
-    @State var date: String
-    @State var month: String
-    @State var year: String
-    
-    @State var emotion: String
-    @State var diary: String
-    @State var notes: String
+    var journalItem: JournalDummy
     
     var body: some View {
         NavigationView{
-            VStack{
-                Image(emotion)
-                    .resizable()
-                    .frame(width: 101, height: 101)
+            VStack(){
+                HStack{
+                    ForEach(journalItem.emotion, id:\.self) { value in
+                        Image(value)
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                    }
+                }
+                .padding(.top)
                 
-                Text("You were feeling \(emotion) at \(time)")
+                Text("You were feeling \(journalItem.emotion.map{String($0)}.joined(separator: " and ")) at \(journalItem.entryDate.formatted(date: .omitted, time: .shortened))")
                     .font(.headline)
-                    .padding(.vertical)
+                    .padding([.top, .leading, .trailing])
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20.0)
@@ -44,7 +42,7 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(diary)
+                            Text(journalItem.diary)
                                 .font(.subheadline)
                                 .padding()
                                 .background(.white)
@@ -60,8 +58,6 @@ struct DetailDiaryView: View {
                         .frame(height: 159)
                     }
                 }
-                .frame(width: 350, height: 225)
-                .padding(.horizontal)
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20.0)
@@ -79,7 +75,7 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(notes)
+                            Text(journalItem.note)
                                 .font(.subheadline)
                                 .padding()
                                 .background(.white)
@@ -93,27 +89,20 @@ struct DetailDiaryView: View {
                                         .foregroundColor(greenbutton)
                                 )
                         .frame(height: 159)
-                        
                     }
                 }
-                .frame(width: 350, height: 225)
-                .padding(.horizontal)
-                .navigationBarTitle(Text("\(date) \(month) \(year)"))
+                .navigationBarTitle(Text("\(journalItem.entryDate.formatted(date: .complete, time: .omitted))"))
                 .navigationBarTitleDisplayMode(.inline)
+                Spacer()
             }
+            
         }
+        .padding(.vertical)
     }
 }
 
 struct DetailDiaryView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailDiaryView(time: "14:00",
-                        date: "22",
-                        month: "JUNE",
-                        year: "2022",
-                        emotion: "Sad",
-                        diary: "Aku lagi ada masalah di tempat kerja. I’m so stressedddd goshhh mana pas nyampe ban motor pecah punn semoga mood ku tetap terjaga dah. huhuhu …",
-                        notes: "Karena lagi pusing banget aku cuma berharap hari ini bisa berakhir dengan baik, sambil mencari solusi juga, hopefully aku nggak overthinking")
+        DetailDiaryView(journalItem: GetJournalModelView().journals[2])
     }
 }
-

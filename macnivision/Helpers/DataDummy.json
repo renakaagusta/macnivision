@@ -1,0 +1,56 @@
+[
+    {
+        "id" : 1,
+        "recordId" : "1",
+        "userId" : "1",
+        "journalDate" : "20:32, 4 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Happy", "Surprised"]
+    },
+    {
+        "id" : 2,
+        "recordId" : "2",
+        "userId" : "1",
+        "journalDate" : "05:05, 5 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Worry", "Sad"]
+    },
+    {
+        "id" : 3,
+        "recordId" : "3",
+        "userId" : "1",
+        "journalDate" : "13:05, 5 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Sad"]
+    },
+    {
+        "id" : 4,
+        "recordId" : "4",
+        "userId" : "1",
+        "journalDate" : "05:05, 9 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Angry", "Sad"]
+    },
+    {
+        "id" : 5,
+        "recordId" : "5",
+        "userId" : "1",
+        "journalDate" : "13:00, 9 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Happy", "Sad"]
+    },
+    {
+        "id" : 6,
+        "recordId" : "6",
+        "userId" : "1",
+        "journalDate" : "23:00, 9 Jul 2022",
+        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
+        "emotion" : ["Happy", "Sad"]
+    }
+]
