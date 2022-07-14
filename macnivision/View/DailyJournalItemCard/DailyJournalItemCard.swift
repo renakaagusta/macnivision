@@ -51,7 +51,11 @@ struct DailyJournalItemCard: View {
             self.showDetailDiary.toggle()
         }
         .sheet(isPresented: $showDetailDiary){
-            DetailDiaryView(journalItem: GetJournalModelView().journals[journalId])
+            DetailDiaryView(journalDate: "\(journalItem.entryDate.formatted(date: .complete, time: .omitted))",
+                            emotion: journalItem.emotion,
+                            time: "\(journalItem.entryDate.formatted(date: .omitted, time: .shortened))",
+                            diary: journalItem.diary,
+                            note: journalItem.note)
         }
     }
 }

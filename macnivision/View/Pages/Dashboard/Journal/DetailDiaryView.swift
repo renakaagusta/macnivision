@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct DetailDiaryView: View {
-    var journalItem: JournalDummy
+    @State var journalDate : String
+    @State var emotion : [String]
+    @State var time : String
+    @State var diary : String
+    @State var note : String
     
     var body: some View {
         NavigationView{
             VStack(){
                 HStack{
-                    ForEach(journalItem.emotion, id:\.self) { value in
+                    ForEach(emotion, id:\.self) { value in
                         Image(value)
                             .resizable()
                             .frame(width: 80, height: 80)
@@ -22,7 +26,7 @@ struct DetailDiaryView: View {
                 }
                 .padding(.top)
                 
-                Text("You were feeling \(journalItem.emotion.map{String($0)}.joined(separator: " and ")) at \(journalItem.entryDate.formatted(date: .omitted, time: .shortened))")
+                Text("You were feeling \(emotion.map{String($0)}.joined(separator: " and ")) at \(time)")
                     .font(.headline)
                     .padding([.top, .leading, .trailing])
                 
@@ -42,7 +46,7 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(journalItem.diary)
+                            Text(diary)
                                 .font(.subheadline)
                                 .padding()
                                 .background(.white)
@@ -75,7 +79,7 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(journalItem.note)
+                            Text(note)
                                 .font(.subheadline)
                                 .padding()
                                 .background(.white)
@@ -91,7 +95,7 @@ struct DetailDiaryView: View {
                         .frame(height: 159)
                     }
                 }
-                .navigationBarTitle(Text("\(journalItem.entryDate.formatted(date: .complete, time: .omitted))"))
+                .navigationBarTitle(Text("\(journalDate)"))
                 .navigationBarTitleDisplayMode(.inline)
                 Spacer()
             }
@@ -103,6 +107,10 @@ struct DetailDiaryView: View {
 
 struct DetailDiaryView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailDiaryView(journalItem: GetJournalModelView().journals[2])
+        DetailDiaryView(journalDate: "Jul 13, 2022",
+                        emotion: ["Sad", "Worry"],
+                        time: "04:24 PM",
+                        diary: "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+                        note: "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa")
     }
 }
