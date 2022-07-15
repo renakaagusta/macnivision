@@ -128,11 +128,20 @@ struct PetView: View {
                                                     .offset(x: 75, y:50)
                                                 
                                                 //Text dialogue
-                                                Text(randomizeDialogue)
-                                                    .font(.system(size: 15, weight: .bold))
-                                                    .offset(x: 75, y: 47)
-                                                    .frame(width: 150, height: 80, alignment: .center)
-                                                    .multilineTextAlignment(.center)
+                                                if isHungry == true && getPet.foodAmount != 0 {
+                                                    Text("I'm hungry, please feed me")
+                                                        .font(.system(size: 15, weight: .bold))
+                                                        .offset(x: 75, y: 47)
+                                                        .frame(width: 150, height: 80, alignment: .center)
+                                                        .multilineTextAlignment(.center)
+                                                } else if getPet.foodAmount > 0 {
+                                                    Text(randomizeDialogue)
+                                                        .font(.system(size: 15, weight: .bold))
+                                                        .offset(x: 75, y: 47)
+                                                        .frame(width: 150, height: 80, alignment: .center)
+                                                        .multilineTextAlignment(.center)
+                                                }
+                                                
                                             }
                                         }
                                         Image("Cat hungry") //gak kepake, biar button nya segede pet nya aja. Biarin aja
@@ -143,15 +152,22 @@ struct PetView: View {
                                     }
                                     switch getPet.typePet {
                                         case .dog:
-                                                if isTap == true  {
+                                                if isTap == true && isHungry == false {
                                                     Image("Dog pat")
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                         .frame(width: 350, height: 350)
                                                         .font(.system(size: 15))
                                                         .offset(x:15, y:50)
-                                                } else if isHungry == false || isTap == false {
+                                                } else if isTap == false && isHungry == false {
                                                     Image("Dog normal")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 350, height: 350)
+                                                        .font(.system(size: 15))
+                                                        .offset(x:15, y:50)
+                                                } else if isHungry == true {
+                                                    Image("Dog hungry")
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                         .frame(width: 350, height: 350)
@@ -159,15 +175,22 @@ struct PetView: View {
                                                         .offset(x:15, y:50)
                                                 }
                                             default:
-                                                if isTap == true  {
+                                                if isTap == true && isHungry == false {
                                                     Image("Cat pat")
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                         .frame(width: 350, height: 350)
                                                         .font(.system(size: 15))
                                                         .offset(x:15, y:50)
-                                                } else if isHungry == false || isTap == false {
+                                                } else if isTap == false && isHungry == false {
                                                     Image("Cat normal")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 350, height: 350)
+                                                        .font(.system(size: 15))
+                                                        .offset(x:15, y:50)
+                                                } else if isHungry == true {
+                                                    Image("Cat hungry")
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                         .frame(width: 350, height: 350)
@@ -188,7 +211,7 @@ struct PetView: View {
                                     //Image petnya makan
                                     switch getPet.typePet {
                                     case .dog:
-                                            if isEat == true  {
+                                        if isEat == true && getPet.foodAmount != 0  {
                                                 ZStack {
                                                     //Dialogue box maem
                                                     Image("dialoguebox short")
@@ -196,7 +219,7 @@ struct PetView: View {
                                                         .frame(width: 200, height: 100)
                                                         .offset(x: 75, y: -500)
                                                     
-                                                    //Text dialogue
+//                                                    //Text dialogue
                                                     Text(randomizeFeedDialogue)
                                                         .font(.system(size: 15, weight: .bold))
                                                         .offset(x: 75, y: -505)
@@ -209,9 +232,22 @@ struct PetView: View {
                                                     .frame(width: 350, height: 350)
                                                     .font(.system(size: 15))
                                                     .offset(x:15, y:-260)
-                                            }
+                                        } else if getPet.foodAmount == 0 {
+                                            //Dialogue box maem
+                                            Image("dialoguebox short")
+                                                .resizable()
+                                                .frame(width: 200, height: 100)
+                                                .offset(x: 75, y: -500)
+                                            
+                                            //Text dialogue
+                                            Text("No Pet Food Left. Please fill your Journal to get Pet Food")
+                                                .font(.system(size: 15, weight: .bold))
+                                                .offset(x: 75, y: -500)
+                                                .frame(width: 150, height: 80, alignment: .center)
+                                                .multilineTextAlignment(.center)
+                                        }
                                         default:
-                                            if isEat == true  {
+                                        if isEat == true && getPet.foodAmount != 0  {
                                                 ZStack {
                                                     //Dialogue box maem
                                                     Image("dialoguebox short")
@@ -219,21 +255,33 @@ struct PetView: View {
                                                         .frame(width: 200, height: 100)
                                                         .offset(x: 75, y: -500)
                                                     
-                                                    //Text dialogue maem
+//                                                    //Text dialogue
                                                     Text(randomizeFeedDialogue)
                                                         .font(.system(size: 15, weight: .bold))
                                                         .offset(x: 75, y: -505)
                                                         .frame(width: 150, height: 80, alignment: .center)
                                                         .multilineTextAlignment(.center)
                                                 }
-                                                //Biarin aja ini
                                                 Image("Cat eating")
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 350, height: 350)
                                                     .font(.system(size: 15))
                                                     .offset(x:15, y:-260)
-                                            }
+                                        } else if getPet.foodAmount == 0 {
+                                            //Dialogue box maem
+                                            Image("dialoguebox short")
+                                                .resizable()
+                                                .frame(width: 200, height: 100)
+                                                .offset(x: 75, y: -500)
+                                            
+                                            //Text dialogue
+                                            Text("No Pet Food Left. Please fill your Journal to get Pet Food")
+                                                .font(.system(size: 15, weight: .bold))
+                                                .offset(x: 75, y: -500)
+                                                .frame(width: 150, height: 80, alignment: .center)
+                                                .multilineTextAlignment(.center)
+                                        }
                                     }
                                     Image("Pet Food Bowl")
                                         .resizable()
@@ -241,40 +289,41 @@ struct PetView: View {
                                         .frame(width: 150, height: 75)
                                 }
                             }.offset(y: 180)
-                            if isHungry == true {
-                                ZStack {
-                                    //Dialogue box laper
-                                    Image("dialoguebox short")
-                                        .resizable()
-                                        .frame(width: 200, height: 100)
-                                        .offset(x: 75, y: -300)
-                                    
-                                    //Text dialogue laper
-                                    Text("I'm Hungry, please feed me")
-                                        .font(.system(size: 15, weight: .bold))
-                                        .offset(x: 75, y: -302)
-                                        .frame(width: 150, height: 80, alignment: .center)
-                                        .multilineTextAlignment(.center)
-                                }
-                                
-                                //Image kalau petnya laper
-                                switch getPet.typePet {
-                                    case .dog:
-                                            Image("Dog hungry")
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 350, height: 350)
-                                                .font(.system(size: 15))
-                                                .offset(x:15, y:-80)
-                                        default:
-                                            Image("Cat hungry")
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 350, height: 350)
-                                                .font(.system(size: 15))
-                                                .offset(x:15, y:-80)
-                                }
-                            }
+                            
+//                            if isHungry == true {
+//                                ZStack {
+//                                    //Dialogue box laper
+//                                    Image("dialoguebox short")
+//                                        .resizable()
+//                                        .frame(width: 200, height: 100)
+//                                        .offset(x: 75, y: -300)
+//
+//                                    //Text dialogue laper
+//                                    Text("I'm Hungry, please feed me")
+//                                        .font(.system(size: 15, weight: .bold))
+//                                        .offset(x: 75, y: -302)
+//                                        .frame(width: 150, height: 80, alignment: .center)
+//                                        .multilineTextAlignment(.center)
+//                                }
+//
+//                                //Image kalau petnya laper
+//                                switch getPet.typePet {
+//                                    case .dog:
+//                                            Image("Dog hungry")
+//                                                .resizable()
+//                                                .aspectRatio(contentMode: .fit)
+//                                                .frame(width: 350, height: 350)
+//                                                .font(.system(size: 15))
+//                                                .offset(x:15, y:-80)
+//                                        default:
+//                                            Image("Cat hungry")
+//                                                .resizable()
+//                                                .aspectRatio(contentMode: .fit)
+//                                                .frame(width: 350, height: 350)
+//                                                .font(.system(size: 15))
+//                                                .offset(x:15, y:-80)
+//                                }
+//                            }
                         }
                 }
                     .animation(nil)
@@ -288,9 +337,13 @@ struct PetView: View {
         var touchCounter = 0
         randomizeDialogue = Self.listDialogue.randomElement()!
         
-        self.showDialogueBox = true
+        if getPet.foodAmount != 0 {
+            self.showDialogueBox = true
+            self.isTap = true
+        }
+        
         touchCounter += 1
-        self.isTap = true
+        
         let task = DispatchWorkItem {
             self.showDialogueBox = false
             touchCounter = 0
@@ -326,6 +379,7 @@ struct PetView: View {
     //Function for button food
     func foodButtonPressed() {
         randomizeFeedDialogue = Self.listFeedDialogue.randomElement()!
+        
         let task = DispatchWorkItem {
             self.isEat = false
         }
@@ -335,7 +389,6 @@ struct PetView: View {
             self.isEat = true
             self.isHungry = false
             if(getPet.hungryLevel + Float(foodBonus) > 100) {
-                
                 getPet.hungryLevel = 100
                 getPet.foodAmount -= 1
             } else {
