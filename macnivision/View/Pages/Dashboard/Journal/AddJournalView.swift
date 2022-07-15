@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddJournalView: View {
     @EnvironmentObject var addJournalViewModel: JournalAddViewModel
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.self) var env
     
     @FocusState var isInputActive: Bool
@@ -272,6 +273,10 @@ extension AddJournalView{
             else{
                 //this should be a place to add data
                 addJournalViewModel.entryDate = Date()
+                showAlert(title: "Great job! Thank you ^^")
+                addJournalViewModel.entryDate = Date()
+                self.presentationMode.wrappedValue.dismiss()
+                env.dismiss()
             }
         }
         label:{

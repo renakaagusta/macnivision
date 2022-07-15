@@ -47,10 +47,12 @@ struct DetailDiaryView: View {
                         
                         VStack{
                             Text(diary)
-                                .font(.subheadline)
                                 .padding()
+                                .frame(width: 360)
+                                .font(.subheadline)
                                 .background(.white)
                                 .foregroundColor(.black)
+                            
 
                             Spacer()
                         }
@@ -64,10 +66,6 @@ struct DetailDiaryView: View {
                 }
                 
                 ZStack{
-                    RoundedRectangle(cornerRadius: 20.0)
-                        .frame(width: 350, height: 225)
-                        .foregroundColor(Color.white)
-                    
                     VStack{
                         HStack{
                             Text("What positive thing to you want to do next?")
@@ -80,8 +78,9 @@ struct DetailDiaryView: View {
                         
                         VStack{
                             Text(note)
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                .frame(width: 360)
                                 .font(.subheadline)
-                                .padding()
                                 .background(.white)
                                 .foregroundColor(.black)
 
@@ -111,6 +110,7 @@ struct DetailDiaryView_Previews: PreviewProvider {
                         emotion: ["Sad", "Worry"],
                         time: "04:24 PM",
                         diary: "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-                        note: "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa")
+                        note: " ")
     }
 }
+

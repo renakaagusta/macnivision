@@ -3,54 +3,119 @@
         "id" : 1,
         "recordId" : "1",
         "userId" : "1",
-        "journalDate" : "20:32, 4 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Happy", "Surprised"]
+        "journalDate" : "10:10, 6 Jun 2022",
+        "diary" : "Aku sedih banget kenapa harus aku yang ngrasain kayak gini.. kenapa sih aku nggak sehebat temen-temenku. Aku juga nggak pengen kok nggak bisa kontribusi banyak ke tim ku",
+        "note" : "aku berharap bisa bekerja lebih baik lagi",
+        "emotion" : ["Sad", "Worry"]
     },
     {
         "id" : 2,
         "recordId" : "2",
         "userId" : "1",
-        "journalDate" : "05:05, 5 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Worry", "Sad"]
+        "journalDate" : "20:30, 7 Jun 2022",
+        "diary" : "Aku seneng banget hari ini, bisa meluangkan waktu bareng sama keluarga tanpa ada perbandingan dengan sepupu-sepupu. Kita cuma nonton sinetron ketawa-ketawa bareng",
+        "note" : "semoga kedepan bisa aku pertahankan perasahaan happy ini",
+        "emotion" : ["Happy"]
     },
     {
         "id" : 3,
         "recordId" : "3",
         "userId" : "1",
-        "journalDate" : "13:05, 5 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Sad"]
+        "journalDate" : "10:10, 6 Jul 2022",
+        "diary" : "Aku ambil waktu buat nulis journal ini di waktu yang senggang hehe. So far hampir setengah hari ini belum ada hal yang mengganggu pikiranku gitu dan sejujurnya sih kerjaanku sebelumnya udah selesai sih, jadi makin ngerasa lebih lega. Jujurnya aku berharap bisa dapet tugas lagi dan yang lain karena kok aku merasa masih kurang berkontribusi ya sejauh ini. Cuma kalo orang lain bilang sih aku dah membantu banget. Apa bener nggak ya…",
+        "note" : "Mungkin hari ini aku bakal nyoba untuk menawari bantuan yang bisa aku lakukan buat orang lain karena kok rasanya guilty ya kalo keliatan nganggur padahal orang lain punya kerjaan masing-masing wkwkwk.",
+        "emotion" : ["Happy"]
     },
     {
         "id" : 4,
         "recordId" : "4",
         "userId" : "1",
-        "journalDate" : "05:05, 9 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Angry", "Sad"]
+        "journalDate" : "18:00, 6 Jul 2022",
+        "diary" : "Seneng sih kali ini dapet kerjaan baru di dalam tim, dan akhirnya aku udah merasa nggak terlalu gabut. Tapi di satu sisi juga jadi pressure buat aku karena takutnya malah bikin tim aku jadi lebih kerepotan karna aku ya. Sebenernya bingung juga sih malah jadinya aku kayak orang labil gitu, tapi yaaa aku bakal berusaha sebisaku dan semoga memuaskan jugaaa",
+        "note" : " ",
+        "emotion" : ["Worry", "Happy"]
     },
     {
         "id" : 5,
         "recordId" : "5",
         "userId" : "1",
-        "journalDate" : "13:00, 9 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
-        "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Happy", "Sad"]
+        "journalDate" : "20:00, 6 Jul 2022",
+        "diary" : "Aku sedih pol seh skarang soale aku bingung mau makan indomi pake nasi ta gak. Lalu juga lagi ada beban pikiran kan seperti yang aku ceritain sebelumnya bikin makan jadi gaenak dan malah kepikiran terus, sampe nasi goreng spesial pun udah nggak spesial lagi di mataku gitu lho",
+        "note" : " ",
+        "emotion" : ["Sad", "Worry"]
     },
     {
         "id" : 6,
         "recordId" : "6",
         "userId" : "1",
-        "journalDate" : "23:00, 9 Jul 2022",
-        "diary" : "Makan siangku sangad enakssss luv sangadddd. Moodku jadi membaikk thanks nasi padang <3",
+        "journalDate" : "06:40, 9 Jul 2022",
+        "diary" : "Bangun pagi-pagi, tiba-tiba dapet kabar ternyata harus ada meeting dadakan donggg. Yaampun ngagetin bangettt tapi gimana yaa udah jadi keseharian dari dulu siii. Smoga aja sih meetingnya nggak annoying lah yaa. Kan juga aku nggak mau meeting yang kurang mengenakkan pagi-pagi malah ngerusak moodku seharian.",
         "note" : "Semoga besok bakal lebih baik lagi! aku percaya aku pasti bisa",
-        "emotion" : ["Happy", "Sad"]
+        "emotion" : ["Worry", "Surprised"]
+    },
+    {
+        "id" : 7,
+        "recordId" : "7",
+        "userId" : "1",
+        "journalDate" : "14:02, 9 Jul 2022",
+        "diary" : "Kesel sekesel keselnyaaa,, kenapa sih harus ketemu sama rekan kerja kayak gituuu. Hari ini tuh harusnya bagian dia lho si C tapi kok seenaknya sendiri ngelimpahin kerjaannya ke aku. Mungkin aku belajar dari kejadian ini kalo aku mau kerjain tugas apalagi kalo satu tim sama dia, keknya jangan terlalu cepet beresin tugasku deh. Kalo nggak mungkin bakal kejadian kayak gini lagi, dan aku malah jadi bertanya-tanya, kerjaan dia sekarang apa kalo bagiannya dia (Si C) ini dilimpahin ke aku. Kayak, apa eksistensimu selama inii",
+        "note" : "Mungkin hari ini aku bakal nyoba untuk menawari bantuan yang bisa aku lakukan buat orang lain karena kok rasanya guilty ya kalo keliatan nganggur padahal orang lain punya kerjaan masing-masing wkwkwk.",
+        "emotion" : ["Angry"]
+    },
+    {
+        "id" : 8,
+        "recordId" : "8",
+        "userId" : "1",
+        "journalDate" : "20:00, 9 Jul 2022",
+        "diary" : "Tau nggak sih rasanya habis diterbangin setinggi gedung burj khalifa 1 jam kemudian dijatohin sedalem palung mariana. Sumpah aku pikir hari ini kok apes banget yaaa. Hari ini udah kena serangan meeting tiba-tiba, terus dapet temen tim kerja yang nggak enak,, tugasnya malah aku yang selesaiin. Terus barusan mesen makanan via ojol malah makanannya nggak enakk lagiii.",
+        "note" : " ",
+        "emotion" : ["Sad"]
+    },
+    {
+        "id" : 9,
+        "recordId" : "9",
+        "userId" : "1",
+        "journalDate" : "08:00, 12 Jul 2022",
+        "diary" : "Pagi ini sangat amaaan tentraaam dan damaaaai banget. Gak biasanya aku bisa memulai hari sebahagia ini. Hari ini aku bangunnya lebih awal dan gak cranky, terus juga masih bisa nyempetin nonton tv bentar sambil sarapan pagi dengan santai.",
+        "note" : "Aku mau bangun lebih awal seperti hari ini agar bisa mempersiapkan segala sesuatunya untuk hari ini dengan lebih tenang.",
+        "emotion" : ["Happy"]
+    },
+    {
+        "id" : 10,
+        "recordId" : "10",
+        "userId" : "1",
+        "journalDate" : "19:00, 12 Jul 2022",
+        "diary" : "Aku senang banget sih karena tadi aku akhirnya diijinin punya kendaraan sendiri. Tapi di lain sisi aku merasa bakal sulit juga sih, karena harus rawat kendaraan juga gitu.",
+        "note" : "Semoga aja aku bisa rawat dengan baik, dan bisa pakai mobilnya dengan baik hehehe",
+        "emotion" : ["Worry", "Happy"]
+    }
+    ,
+    {
+        "id" : 11,
+        "recordId" : "11",
+        "userId" : "1",
+        "journalDate" : "21:12, 12 Jul 2022",
+        "diary" : "Aku kelupaan kalau kemarin itu ulang tahun si Zara. Mana sempat ngechat lho aku kemarin tapi bener - bener gak ingat sama hari ulang tahunnya, dia juga gak ngasih tanda apa - apa gitu kayak tiba - tiba sebel gitu gak adaaa, balas chatnya seperti biasa aja gitu. semoga aja beneran gak marah si Zara. Nanti bakal ku surprise-in deh pas weekend hehehe",
+        "note" : "Set a calendar for my every precious one bday. I know for some people it’s not a thing, tapi bagi aku yang suka lupaan ini, mengatur kalender is a must.",
+        "emotion" : ["Worry","Sad"]
+    },
+    {
+        "id" : 12,
+        "recordId" : "12",
+        "userId" : "1",
+        "journalDate" : "07:07, 15 Jul 2022",
+        "diary" : "Aku masih kebawa suasana sama “Twenty One Twenty Five”. Iyaaa aku nampak kudet emang yak baru nonton sekarang, tapi memang sebagus itu ya drakor… kocaknya dapet tapi sedihnya lebih dapettt. Mantap sih K-Drama ini, penuh totalitas. Dan untuk moodku sendiri sih memang jadi bener - bener ikut kebawa ya sampai pagi ini, semoga pas nanti aku sampai di tempat kerja udah hilang lah mood jelek ini.",
+        "note" : "Karena sudah tahu aku gampang banget mood swing dan agak susah hilanginnya apalagi kalau mood lagi buruk, sebaiknya kedepannya aku nonton drakornya pas lagi mau weekend aja deh biar gak beresiko ke pekerjaan.",
+        "emotion" : ["Sad"]
+    }
+    ,
+    {
+        "id" : 13,
+        "recordId" : "13",
+        "userId" : "1",
+        "journalDate" : "12:00, 15 Jul 2022",
+        "diary" : "So far so good ya untuk hari ini. cuma untuk satu jam pertama aja pas kerja yang masih mood sedih banget, tapi setelahnya udah kembali ke normal kok. Sangat berharap untuk bisa memaintain sampai kerjaan selesai.",
+        "note" : "Selalu mikirin hal - hal yang baik dikala kita merasa buruk. Itu ngebantu sih dalam mengendalikan emosi dalam jiwa, memang sulit tapi segalanya memang membutuhkan waktu.",
+        "emotion" : ["Happy"]
     }
 ]

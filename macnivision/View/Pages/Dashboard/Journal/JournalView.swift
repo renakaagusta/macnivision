@@ -28,6 +28,10 @@ struct JournalView: View {
         let dateComponents = DateComponents(year: Int(yearSelection), month: getMonthNumber(monthStr: monthSelection))
         
         let calendar = Calendar.current
+        let todayDate = calendar.component(.day, from: date)
+        let todayMonth = Int(calendar.component(.month, from: date))
+        let todayYear = Int(calendar.component(.year, from: date))
+        
         let date = calendar.date(from: dateComponents)!
         let range = calendar.range(of: .day, in: .month, for: date)!
         let numofday = range.count
@@ -51,20 +55,31 @@ struct JournalView: View {
                 
                 LazyVGrid(columns: gridItemLayout, spacing: 15){
                     ForEach(numberslist, id: \.self) { numbers in
-                        let exist = isJournalExist(year: Int(yearSelection) ?? 2022,
-                                                   month: getMonthNumber(monthStr: monthSelection),
-                                                   date: numbers)
-                        
-                        if exist{
-                            NavigationLink(destination:
-                                            DailyJournalView(date: "\(numbers)",
-                                                             month: monthSelection,
-                                                             year: yearSelection)){
-                                DayItemCard(isDiaryExist: true, dateNumber: numbers)
-                                
+                        if Int(yearSelection)! > todayYear {
+                            EmptyDayItemCard(dateNumber: numbers)
+                        }
+                        else if getMonthNumber(monthStr: monthSelection) > todayMonth && Int(yearSelection)! == todayYear {
+                            EmptyDayItemCard(dateNumber: numbers)
+                        }
+                        else if numbers > todayDate && getMonthNumber(monthStr: monthSelection) == todayMonth && Int(yearSelection)! == todayYear {
+                            EmptyDayItemCard(dateNumber: numbers)
+                        }
+                        else{
+                            let exist = isJournalExist(year: Int(yearSelection) ?? 2022,
+                                                       month: getMonthNumber(monthStr: monthSelection),
+                                                       date: numbers)
+                            
+                            if exist{
+                                NavigationLink(destination:
+                                                DailyJournalView(date: "\(numbers)",
+                                                                 month: monthSelection,
+                                                                 year: yearSelection)){
+                                    DayItemCard(isDiaryExist: true, dateNumber: numbers)
+                                    
+                                }
+                            }else{
+                                DayItemCard(isDiaryExist: false, dateNumber: numbers)
                             }
-                        }else{
-                            DayItemCard(isDiaryExist: false, dateNumber: numbers)
                         }
                     }
                 }
