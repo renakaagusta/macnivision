@@ -9,24 +9,23 @@ import SwiftUI
 
 struct PetView: View {
     
-    //@ObservedObject var globalPet = PetGlobalVariable.petGlobal
-    
+    //Object for the Pet
     @State var getPet: Pet = Pet(
         id: 0,
         recordId: "",
         userId: 0,
         hungryLevel: 0.0,
         foodAmount: 0,
-        typePet: .dog
+        typePet: .cat
     )
     
+    //Variable to control Food & Hunger System
     @State var currentHungryPercent: Float = 0 //to contain and check current hungry level for decreasing level system
     @State private var counter = 0 //count how much tap
     @State var totalFood: Int = 0 //PetGlobalVariable.petGlobal.petFoodAmount
-    var foodBonus: CGFloat = 1
+    var foodBonus: CGFloat = 25 //Amount percentage oh healthbar restore when user feed the pet
     
-    //kondisi emotion pet
-    //@State var petChecker: String
+    //Condition to control Pet Emotion
     @State var isDog:Bool
     @State var isHungry:Bool = true
     @State var isEat:Bool = false
@@ -34,44 +33,52 @@ struct PetView: View {
     @State var buttoFoodPressed:Bool = false
     @State var showDialogueBox:Bool = false
     
+    //Color for Hunger Bar
     var colorHungryBarMin = Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))
     var colorHungryBarMax = Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
     
-    //Dialogue for pet
+    //Dialogue list for pet
     static let listDialogue = ["Hi... Have a nice day!", "Do you want to play with me?", "Hehe, you love to touch my head aren't you?", "My body sure is fluffy"]
     static let listFeedDialogue = ["Yummy!!!", "Taste so good", "Yum yum...", "Yayy eat...", "Thanks for feeding me"]
-    static let listFullDialogue = ["I'm Full", "Thanks for feeding me, now i'm full", "Full tummy happy life"]
+//    static let listFullDialogue = ["I'm Full", "Thanks for feeding me, now i'm full", "Full tummy happy life"]
     
-    //For
+    //To control randomization of the dialogue
     @State var randomizeDialogue: String
     @State var randomizeFeedDialogue: String
+//    @State var randomizePetFullDialogue: String
     
     init() {
         self.randomizeDialogue = PetView.listDialogue.randomElement()!
         self.randomizeFeedDialogue = PetView.listFeedDialogue.randomElement()!
+//        self.randomizePetFullDialogue = PetView.listFullDialogue.randomElement()!
           
         self.isDog = false
     }
     
     var body: some View {
         
+        //Timer spesificly to store time for hungry system
         let timer = Timer.publish(every:1, tolerance: 0.5, on: .main, in: .common).autoconnect()
         
         ZStack {
+            //Background image
             Image("Background")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.top).edgesIgnoringSafeArea(.bottom)
             
+            //Window image
             Image("Window")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 230)
                 .offset(x: -180, y: -180)
             
+            
             VStack(spacing: 10) {
                 //Spacer()
                 HStack(spacing: 10) {
+                    //Stack for Hungry Bar
                     ZStack {
                         HungryBar(hungryBarWidth: 220, hungryBarHeight: 30, hungryBarCornerRadious: 20, hungryPercentage: CGFloat(getPet.hungryLevel), gradientColorLeft: colorHungryBarMin, gradientColorRight: colorHungryBarMax)
                             .offset(y:20)
@@ -93,12 +100,14 @@ struct PetView: View {
                                 .font(.system(size: 18, weight: .bold))
                     }
                     
+                    //Food Bar & Container
                     PetFoodBar(totalPetFood: getPet.foodAmount, petFoodContainerWidth: 100, petFoodContainerHeight: 30)
                             .offset(y:20)
                 }
                 Spacer()
                     VStack {
                         ZStack {
+                            //Button for touching the Pet
                             Button(action: {touchPet()}) {
                                 VStack(spacing : 0) {
                                     ZStack {
@@ -185,7 +194,7 @@ struct PetView: View {
                                                     Image("dialoguebox short")
                                                         .resizable()
                                                         .frame(width: 200, height: 100)
-                                                        .offset(x: 75, y: -300)
+                                                        .offset(x: 75, y: -500)
                                                     
                                                     //Text dialogue
                                                     Text(randomizeFeedDialogue)
@@ -199,7 +208,7 @@ struct PetView: View {
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 350, height: 350)
                                                     .font(.system(size: 15))
-                                                    .offset(x:75, y:-505)
+                                                    .offset(x:15, y:-260)
                                             }
                                         default:
                                             if isEat == true  {
@@ -274,6 +283,7 @@ struct PetView: View {
         }
     }
     
+    //Function for button touchPet
     func touchPet() {
         var touchCounter = 0
         randomizeDialogue = Self.listDialogue.randomElement()!
@@ -290,10 +300,11 @@ struct PetView: View {
         if touchCounter > 1 {
             task.cancel()
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: task)
         }
     }
     
+    //Function to decrease the hungry bar level
     func decreaseHungryBar() {
         if getPet.hungryLevel > 0 {
             if currentHungryPercent - getPet.hungryLevel > 0 {
@@ -312,29 +323,27 @@ struct PetView: View {
         }
     }
     
+    //Function for button food
     func foodButtonPressed() {
-        //hungryPercent = CGFloat.random(in: 1...100)
         randomizeFeedDialogue = Self.listFeedDialogue.randomElement()!
         let task = DispatchWorkItem {
             self.isEat = false
         }
         
-        if(getPet.hungryLevel != 100 && totalFood > 0 ) {
+        if(getPet.hungryLevel != 100 && getPet.foodAmount > 0 ) {
             
             self.isEat = true
             self.isHungry = false
             if(getPet.hungryLevel + Float(foodBonus) > 100) {
                 
                 getPet.hungryLevel = 100
-                totalFood -= 1
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
+                getPet.foodAmount -= 1
             } else {
                 getPet.hungryLevel += Float(foodBonus)
-                totalFood -= 1
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: task)
+                getPet.foodAmount -= 1
             }
         }
-        else if (getPet.hungryLevel >= 100 && totalFood != 0) {
+        else if (getPet.hungryLevel >= 100 && getPet.foodAmount != 0) {
             getPet.hungryLevel = 100
             self.isEat = false
         }
