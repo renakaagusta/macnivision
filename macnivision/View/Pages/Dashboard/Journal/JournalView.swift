@@ -123,6 +123,7 @@ extension JournalView{
                     .labelStyle(.iconOnly)
                     .foregroundColor(.green)
                 Text("Add Journal")
+                    .accentColor(.black)
             }
         }
     }
