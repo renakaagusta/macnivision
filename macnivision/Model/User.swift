@@ -9,7 +9,6 @@ import Foundation
 
 struct User: Hashable, Codable, Identifiable{
     var id: Int
-    var recordID : String
-    var userId : Int
+    var recordId : String
     var nickname: String
 }

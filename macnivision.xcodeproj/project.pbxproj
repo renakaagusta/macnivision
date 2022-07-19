@@ -27,17 +27,25 @@
 		2F80389A286AF3B6008BF4BF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803898286AF3B6008BF4BF /* Color.swift */; };
 		2F80389B286AF3B6008BF4BF /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F803899286AF3B6008BF4BF /* GlobalVariables.swift */; };
 		2F80389F286B058B008BF4BF /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80389E286B058B008BF4BF /* Scheme.swift */; };
+		2F82D072287E30670000843A /* JournalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D071287E30670000843A /* JournalService.swift */; };
+		2F82D074287E31030000843A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D073287E31030000843A /* ScheduleService.swift */; };
+		2F82D078287E39AA0000843A /* GetSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D077287E39AA0000843A /* GetSchedule.swift */; };
+		2F82D07C287E3DC80000843A /* AddJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D07B287E3DC80000843A /* AddJournal.swift */; };
+		2F82D07E287E3E000000843A /* GetJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D07D287E3E000000843A /* GetJournal.swift */; };
+		2F82D080287E46F70000843A /* PetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D07F287E46F70000843A /* PetService.swift */; };
+		2F82D083287E85910000843A /* AddPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D082287E85910000843A /* AddPet.swift */; };
+		2F82D085287E9A210000843A /* UpdatePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D084287E9A210000843A /* UpdatePet.swift */; };
+		2F82D088287E9A540000843A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D087287E9A540000843A /* UserService.swift */; };
+		2F82D08B287E9BF30000843A /* AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D08A287E9BF30000843A /* AddUser.swift */; };
+		2F82D08D287E9C240000843A /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D08C287E9C240000843A /* GetUser.swift */; };
+		2F82D090287E9C370000843A /* GetPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82D08F287E9C370000843A /* GetPet.swift */; };
 		2F991C722869700A00B4E914 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C712869700A00B4E914 /* DashboardView.swift */; };
 		2F991C742869703F00B4E914 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C732869703F00B4E914 /* PetView.swift */; };
 		2F991C792869706D00B4E914 /* MedicalInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C782869706D00B4E914 /* MedicalInfoListView.swift */; };
-		2F99B156286C00080047CD02 /* PsychiatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B155286C00080047CD02 /* PsychiatristCard.swift */; };
-		2F99B15B286C04590047CD02 /* HealtCareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15A286C04590047CD02 /* HealtCareCard.swift */; };
 		2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */; };
 		2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15E286C2FEE0047CD02 /* JournalView.swift */; };
 		2F99B166286C2FEE0047CD02 /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B160286C2FEE0047CD02 /* AddJournalView.swift */; };
 		2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */; };
-		2F99B16A286C3ABD0047CD02 /* DayItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B168286C3ABD0047CD02 /* DayItemCard.swift */; };
-		2F99B16B286C3ABD0047CD02 /* DailyJournalItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */; };
 		2F99B172286C44CC0047CD02 /* PetFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B171286C44CC0047CD02 /* PetFoodBar.swift */; };
 		2F99B174286C45160047CD02 /* HungryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B173286C45160047CD02 /* HungryBar.swift */; };
 		2F99B176286C47FC0047CD02 /* MedicalInfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B175286C47FC0047CD02 /* MedicalInfoDetailView.swift */; };
@@ -49,6 +57,13 @@
 		2FC7C2A82869A66A0014A95E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A72869A66A0014A95E /* Colors.swift */; };
 		2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A92869A6DA0014A95E /* Strings.swift */; };
 		2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2AC2869A7420014A95E /* AsyncImage.swift */; };
+		2FF41675287AE1F300B849D6 /* PsychiatristCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41674287AE1F300B849D6 /* PsychiatristCard.swift */; };
+		2FF41677287AE20100B849D6 /* HealtCareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41676287AE20100B849D6 /* HealtCareCard.swift */; };
+		2FF41679287AE20D00B849D6 /* DailyJournalItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41678287AE20D00B849D6 /* DailyJournalItemCard.swift */; };
+		2FF4167B287AE23D00B849D6 /* MedicalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4167A287AE23D00B849D6 /* MedicalService.swift */; };
+		2FF4167F287AE39D00B849D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4167E287AE39D00B849D6 /* CloudKit.framework */; };
+		2FF41681287AE90D00B849D6 /* GetMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41680287AE90D00B849D6 /* GetMedical.swift */; };
+		2FF41699287AE9C400B849D6 /* DayItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41698287AE9C400B849D6 /* DayItemCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,17 +107,25 @@
 		2F803898286AF3B6008BF4BF /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2F803899286AF3B6008BF4BF /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		2F80389E286B058B008BF4BF /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scheme.swift; path = macnivision/View/Atoms/Scheme.swift; sourceTree = SOURCE_ROOT; };
+		2F82D071287E30670000843A /* JournalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalService.swift; sourceTree = "<group>"; };
+		2F82D073287E31030000843A /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		2F82D077287E39AA0000843A /* GetSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSchedule.swift; sourceTree = "<group>"; };
+		2F82D07B287E3DC80000843A /* AddJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournal.swift; sourceTree = "<group>"; };
+		2F82D07D287E3E000000843A /* GetJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJournal.swift; sourceTree = "<group>"; };
+		2F82D07F287E46F70000843A /* PetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetService.swift; sourceTree = "<group>"; };
+		2F82D082287E85910000843A /* AddPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPet.swift; sourceTree = "<group>"; };
+		2F82D084287E9A210000843A /* UpdatePet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePet.swift; sourceTree = "<group>"; };
+		2F82D087287E9A540000843A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2F82D08A287E9BF30000843A /* AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUser.swift; sourceTree = "<group>"; };
+		2F82D08C287E9C240000843A /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
+		2F82D08F287E9C370000843A /* GetPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPet.swift; sourceTree = "<group>"; };
 		2F991C712869700A00B4E914 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2F991C732869703F00B4E914 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		2F991C782869706D00B4E914 /* MedicalInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoListView.swift; sourceTree = "<group>"; };
-		2F99B155286C00080047CD02 /* PsychiatristCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychiatristCard.swift; sourceTree = "<group>"; };
-		2F99B15A286C04590047CD02 /* HealtCareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealtCareCard.swift; sourceTree = "<group>"; };
 		2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDiaryView.swift; sourceTree = "<group>"; };
 		2F99B15E286C2FEE0047CD02 /* JournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalView.swift; path = "../../../../../../../../Downloads/macnivision-feature-journal-tab-view 3/macnivision/View/Pages/JournalView.swift"; sourceTree = "<group>"; };
 		2F99B160286C2FEE0047CD02 /* AddJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
 		2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalView.swift; sourceTree = "<group>"; };
-		2F99B168286C3ABD0047CD02 /* DayItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItemCard.swift; sourceTree = "<group>"; };
-		2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalItemCard.swift; sourceTree = "<group>"; };
 		2F99B171286C44CC0047CD02 /* PetFoodBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetFoodBar.swift; sourceTree = "<group>"; };
 		2F99B173286C45160047CD02 /* HungryBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HungryBar.swift; sourceTree = "<group>"; };
 		2F99B175286C47FC0047CD02 /* MedicalInfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoDetailView.swift; sourceTree = "<group>"; };
@@ -114,6 +137,14 @@
 		2FC7C2A72869A66A0014A95E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = macnivision/Colors.swift; sourceTree = SOURCE_ROOT; };
 		2FC7C2A92869A6DA0014A95E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = macnivision/Strings.swift; sourceTree = SOURCE_ROOT; };
 		2FC7C2AC2869A7420014A95E /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		2FF41674287AE1F300B849D6 /* PsychiatristCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsychiatristCard.swift; sourceTree = "<group>"; };
+		2FF41676287AE20100B849D6 /* HealtCareCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealtCareCard.swift; sourceTree = "<group>"; };
+		2FF41678287AE20D00B849D6 /* DailyJournalItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalItemCard.swift; sourceTree = "<group>"; };
+		2FF4167A287AE23D00B849D6 /* MedicalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalService.swift; sourceTree = "<group>"; };
+		2FF4167C287AE39000B849D6 /* macnivision.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macnivision.entitlements; sourceTree = "<group>"; };
+		2FF4167E287AE39D00B849D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2FF41680287AE90D00B849D6 /* GetMedical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMedical.swift; sourceTree = "<group>"; };
+		2FF41698287AE9C400B849D6 /* DayItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItemCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF4167F287AE39D00B849D6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +180,7 @@
 				2F1342FF28658DA600A5CB9C /* macnivisionTests */,
 				2F13430928658DA600A5CB9C /* macnivisionUITests */,
 				2F1342E828658DA500A5CB9C /* Products */,
+				2FF4167D287AE39D00B849D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +197,7 @@
 		2F1342E928658DA500A5CB9C /* macnivision */ = {
 			isa = PBXGroup;
 			children = (
+				2FF4167C287AE39000B849D6 /* macnivision.entitlements */,
 				2F803897286AF3A3008BF4BF /* Helpers */,
 				2F803882286AEDB2008BF4BF /* Model */,
 				2F991C4B2869680C00B4E914 /* Constant */,
@@ -283,6 +317,50 @@
 			path = Pet;
 			sourceTree = "<group>";
 		};
+		2F82D075287E39660000843A /* Medical */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41680287AE90D00B849D6 /* GetMedical.swift */,
+			);
+			path = Medical;
+			sourceTree = "<group>";
+		};
+		2F82D076287E39710000843A /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				2F82D077287E39AA0000843A /* GetSchedule.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		2F82D079287E39D70000843A /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				2F82D07B287E3DC80000843A /* AddJournal.swift */,
+				2F82D07D287E3E000000843A /* GetJournal.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		2F82D081287E85820000843A /* Pet */ = {
+			isa = PBXGroup;
+			children = (
+				2F82D082287E85910000843A /* AddPet.swift */,
+				2F82D084287E9A210000843A /* UpdatePet.swift */,
+				2F82D08F287E9C370000843A /* GetPet.swift */,
+			);
+			path = Pet;
+			sourceTree = "<group>";
+		};
+		2F82D089287E9BE50000843A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2F82D08A287E9BF30000843A /* AddUser.swift */,
+				2F82D08C287E9C240000843A /* GetUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		2F991C432869679800B4E914 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +382,11 @@
 		2F991C49286967D500B4E914 /* Cloudkit */ = {
 			isa = PBXGroup;
 			children = (
+				2FF4167A287AE23D00B849D6 /* MedicalService.swift */,
+				2F82D071287E30670000843A /* JournalService.swift */,
+				2F82D073287E31030000843A /* ScheduleService.swift */,
+				2F82D07F287E46F70000843A /* PetService.swift */,
+				2F82D087287E9A540000843A /* UserService.swift */,
 			);
 			path = Cloudkit;
 			sourceTree = "<group>";
@@ -311,6 +394,11 @@
 		2F991C4A286967EF00B4E914 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2F82D089287E9BE50000843A /* User */,
+				2F82D081287E85820000843A /* Pet */,
+				2F82D079287E39D70000843A /* Journal */,
+				2F82D076287E39710000843A /* Schedule */,
+				2F82D075287E39660000843A /* Medical */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -323,34 +411,6 @@
 				2F80389E286B058B008BF4BF /* Scheme.swift */,
 			);
 			path = Constant;
-			sourceTree = "<group>";
-		};
-		2F991C7F28697E4200B4E914 /* Card */ = {
-			isa = PBXGroup;
-			children = (
-				2F99B16D286C3B900047CD02 /* DayItemCard */,
-				2F99B16C286C3AC20047CD02 /* DailyJournalItemCard */,
-				2FC7C29F2869A1440014A95E /* HospitalCard */,
-				2FC7C29E2869A1330014A95E /* PhysciatristCard */,
-			);
-			name = Card;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		2F99B16C286C3AC20047CD02 /* DailyJournalItemCard */ = {
-			isa = PBXGroup;
-			children = (
-				2F99B169286C3ABD0047CD02 /* DailyJournalItemCard.swift */,
-			);
-			path = DailyJournalItemCard;
-			sourceTree = "<group>";
-		};
-		2F99B16D286C3B900047CD02 /* DayItemCard */ = {
-			isa = PBXGroup;
-			children = (
-				2F99B168286C3ABD0047CD02 /* DayItemCard.swift */,
-			);
-			path = DayItemCard;
 			sourceTree = "<group>";
 		};
 		2F99B16E286C44850047CD02 /* Bar */ = {
@@ -390,8 +450,8 @@
 		2FC7C25F28699C600014A95E /* Moleculs */ = {
 			isa = PBXGroup;
 			children = (
+				2FF41670287AE19800B849D6 /* Card */,
 				2F99B16E286C44850047CD02 /* Bar */,
-				2F991C7F28697E4200B4E914 /* Card */,
 			);
 			path = Moleculs;
 			sourceTree = "<group>";
@@ -433,28 +493,63 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		2FC7C29E2869A1330014A95E /* PhysciatristCard */ = {
-			isa = PBXGroup;
-			children = (
-				2F99B155286C00080047CD02 /* PsychiatristCard.swift */,
-			);
-			path = PhysciatristCard;
-			sourceTree = "<group>";
-		};
-		2FC7C29F2869A1440014A95E /* HospitalCard */ = {
-			isa = PBXGroup;
-			children = (
-				2F99B15A286C04590047CD02 /* HealtCareCard.swift */,
-			);
-			path = HospitalCard;
-			sourceTree = "<group>";
-		};
 		2FC7C2AB2869A7320014A95E /* Image */ = {
 			isa = PBXGroup;
 			children = (
 				2FC7C2AC2869A7420014A95E /* AsyncImage.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		2FF41670287AE19800B849D6 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41697287AE9B800B849D6 /* DayItemCard */,
+				2FF41673287AE1D600B849D6 /* PhsyciatristCard */,
+				2FF41672287AE1CF00B849D6 /* HospitalCard */,
+				2FF41671287AE1B300B849D6 /* DailyJournalItemCard */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		2FF41671287AE1B300B849D6 /* DailyJournalItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41678287AE20D00B849D6 /* DailyJournalItemCard.swift */,
+			);
+			path = DailyJournalItemCard;
+			sourceTree = "<group>";
+		};
+		2FF41672287AE1CF00B849D6 /* HospitalCard */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41676287AE20100B849D6 /* HealtCareCard.swift */,
+			);
+			path = HospitalCard;
+			sourceTree = "<group>";
+		};
+		2FF41673287AE1D600B849D6 /* PhsyciatristCard */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41674287AE1F300B849D6 /* PsychiatristCard.swift */,
+			);
+			path = PhsyciatristCard;
+			sourceTree = "<group>";
+		};
+		2FF4167D287AE39D00B849D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FF4167E287AE39D00B849D6 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FF41697287AE9B800B849D6 /* DayItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41698287AE9C400B849D6 /* DayItemCard.swift */,
+			);
+			path = DayItemCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +568,8 @@
 			dependencies = (
 			);
 			name = macnivision;
+			packageProductDependencies = (
+			);
 			productName = macnivision;
 			productReference = 2F1342E728658DA500A5CB9C /* macnivision.app */;
 			productType = "com.apple.product-type.application";
@@ -545,6 +642,8 @@
 				Base,
 			);
 			mainGroup = 2F1342DE28658DA500A5CB9C;
+			packageReferences = (
+			);
 			productRefGroup = 2F1342E828658DA500A5CB9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -589,9 +688,13 @@
 			files = (
 				2FC7C2A82869A66A0014A95E /* Colors.swift in Sources */,
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
+				2F82D08B287E9BF30000843A /* AddUser.swift in Sources */,
 				2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */,
+				2F82D085287E9A210000843A /* UpdatePet.swift in Sources */,
+				2F82D083287E85910000843A /* AddPet.swift in Sources */,
+				2F82D072287E30670000843A /* JournalService.swift in Sources */,
+				2F82D07C287E3DC80000843A /* AddJournal.swift in Sources */,
 				2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */,
-				2F99B15B286C04590047CD02 /* HealtCareCard.swift in Sources */,
 				2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */,
 				2F80389F286B058B008BF4BF /* Scheme.swift in Sources */,
 				2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */,
@@ -601,29 +704,39 @@
 				2F80388B286AEDC4008BF4BF /* OnboardingFeatureView.swift in Sources */,
 				2F80389A286AF3B6008BF4BF /* Color.swift in Sources */,
 				2F803895286AEDE0008BF4BF /* Journal.swift in Sources */,
+				2F82D090287E9C370000843A /* GetPet.swift in Sources */,
 				2F991C742869703F00B4E914 /* PetView.swift in Sources */,
 				2F99B172286C44CC0047CD02 /* PetFoodBar.swift in Sources */,
 				2FC7C2972869A0A90014A95E /* OutlinedButton.swift in Sources */,
 				2F803896286AEDE0008BF4BF /* Pet.swift in Sources */,
-				2F99B156286C00080047CD02 /* PsychiatristCard.swift in Sources */,
 				2F991C792869706D00B4E914 /* MedicalInfoListView.swift in Sources */,
+				2F82D08D287E9C240000843A /* GetUser.swift in Sources */,
 				2F991C722869700A00B4E914 /* DashboardView.swift in Sources */,
 				2F1342F428658DA600A5CB9C /* Persistence.swift in Sources */,
 				2F99B176286C47FC0047CD02 /* MedicalInfoDetailView.swift in Sources */,
+				2F82D078287E39AA0000843A /* GetSchedule.swift in Sources */,
 				2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */,
 				2FC7C2992869A0D80014A95E /* CircleButton.swift in Sources */,
+				2FF41681287AE90D00B849D6 /* GetMedical.swift in Sources */,
 				2F99B174286C45160047CD02 /* HungryBar.swift in Sources */,
+				2FF41675287AE1F300B849D6 /* PsychiatristCard.swift in Sources */,
 				2FC7C28D28699FF50014A95E /* Card.swift in Sources */,
 				2F80388D286AEDC4008BF4BF /* OnboardingPetView.swift in Sources */,
 				2F80388C286AEDC4008BF4BF /* OnboardingNicknameView.swift in Sources */,
-				2F99B16B286C3ABD0047CD02 /* DailyJournalItemCard.swift in Sources */,
+				2FF4167B287AE23D00B849D6 /* MedicalService.swift in Sources */,
 				2F99B166286C2FEE0047CD02 /* AddJournalView.swift in Sources */,
+				2F82D074287E31030000843A /* ScheduleService.swift in Sources */,
+				2F82D07E287E3E000000843A /* GetJournal.swift in Sources */,
 				2F803893286AEDE0008BF4BF /* User.swift in Sources */,
 				2F1342ED28658DA500A5CB9C /* ContentView.swift in Sources */,
 				2F80388E286AEDC4008BF4BF /* OnboardingView.swift in Sources */,
+				2F82D080287E46F70000843A /* PetService.swift in Sources */,
+				2FF41679287AE20D00B849D6 /* DailyJournalItemCard.swift in Sources */,
+				2FF41699287AE9C400B849D6 /* DayItemCard.swift in Sources */,
+				2F82D088287E9A540000843A /* UserService.swift in Sources */,
+				2FF41677287AE20100B849D6 /* HealtCareCard.swift in Sources */,
 				2F1342EB28658DA500A5CB9C /* macnivisionApp.swift in Sources */,
 				2F803894286AEDE0008BF4BF /* Medical.swift in Sources */,
-				2F99B16A286C3ABD0047CD02 /* DayItemCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +894,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macnivision/macnivision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macnivision/Preview Content\"";
@@ -810,6 +924,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macnivision/macnivision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macnivision/Preview Content\"";

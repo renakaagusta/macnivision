@@ -113,7 +113,7 @@ struct DetailDiaryView_Previews: PreviewProvider {
                         year: "2022",
                         emotion: "Sad",
                         diary: "Aku lagi ada masalah di tempat kerja. I’m so stressedddd goshhh mana pas nyampe ban motor pecah punn semoga mood ku tetap terjaga dah. huhuhu …",
-                        notes: "Karena lagi pusing banget aku cuma berharap hari ini bisa berakhir dengan baik, sambil mencari solusi juga, hopefully aku nggak overthinking")
+                        notes: "Karena lagi pusing banget aku cuma berharap hari ini bisa berakhir dengan baik, sambil mencari solusi juga, hopefully aku nggak overthinking").preferredColorScheme(scheme)
     }
 }
 

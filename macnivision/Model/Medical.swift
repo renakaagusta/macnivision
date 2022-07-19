@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Medical : Hashable, Codable, Identifiable {
     var id : Int
+    var recordId : String = ""
     var name : String
     var email : String = ""
     var contactNumber : String
@@ -20,12 +21,7 @@ struct Medical : Hashable, Codable, Identifiable {
     var address : String
     var city : String
     var description: String
-    
-    var medicalPicture: String
-    var image: Image{
-        Image(medicalPicture)
-    }
-    
+    var image: String
     var medicalType: MedicalType
     enum MedicalType: String, CaseIterable, Codable{
         case hospital = "hospital"
@@ -35,7 +31,9 @@ struct Medical : Hashable, Codable, Identifiable {
 
 struct Schedule : Hashable, Codable, Identifiable {
     var id : Int
+    var recordId : String
     var day : String
     var openedAt : String
     var closedAt : String
+    var medicalId : String?
 }

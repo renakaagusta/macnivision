@@ -15,7 +15,7 @@ struct HealtCareCard: View {
         address: "Jalan Mayjen Prof.Dr.Moestopo No.6-8 Surabaya 60286",
         city: "Pati",
         description: "-",
-        medicalPicture: "Health Care",
+        image: "https://www.google.co.id/images/branding/googleg/1x/googleg_standard_color_128dp.png",
         medicalType: Medical.MedicalType.psychiatrist
     )
     
@@ -28,7 +28,9 @@ struct HealtCareCard: View {
                 }
             }
         }).background(
-            healthCare.image.resizable().cornerRadius(20)
+            AsyncImage(url: URL(string: healthCare.image)!, placeholder: {
+                Text("Loading...")
+            }, width: 160.0, height: 200.0, cornerRadius: 20.0)
         )
     }
 

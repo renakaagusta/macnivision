@@ -135,7 +135,7 @@ struct AddJournalView: View {
 
 struct AddJournalView_Previews: PreviewProvider {
     static var previews: some View {
-        AddJournalView()
+        AddJournalView().preferredColorScheme(scheme)
     }
 }
 
