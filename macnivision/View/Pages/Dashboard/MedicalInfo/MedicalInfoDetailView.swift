@@ -15,7 +15,7 @@ struct MedicalInfoDetailView: View {
         address: "Jalan Mayjen Prof.Dr.Moestopo No.6-8 Surabaya 60286",
         city: "Pati",
         description: "-",
-        medicalPicture: "Health Care",
+        image: "https://d1bpj0tv6vfxyp.cloudfront.net/sering-dianggap-sama-ini-bedanya-psikolog-dan-psikiaterhalodoc.jpg",
         medicalType: Medical.MedicalType.psychiatrist
     )
     
@@ -33,10 +33,12 @@ struct MedicalInfoDetailView: View {
                                 }
                             }
                         }).background(
-                            healthCare.image.resizable()
+                            AsyncImage(url: URL(string: healthCare.image)!,
+                                       placeholder: { Text("Loading ...")}, width: 400.0, height: 300)
                         )
                     } else {
-                        healthCare.image
+                        AsyncImage(url: URL(string: healthCare.image)!,
+                                   placeholder: { Text("Loading ...")})
                     }
                     if(healthCare.medicalType == Medical.MedicalType.psychiatrist) {
                         Text(healthCare.name).fontWeight(.bold)
@@ -96,6 +98,6 @@ struct MedicalInfoDetailView: View {
 
 struct MedicalInfoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MedicalInfoDetailView()
+        MedicalInfoDetailView().preferredColorScheme(scheme)
     }
 }

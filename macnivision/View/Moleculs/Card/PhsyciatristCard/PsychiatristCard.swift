@@ -17,7 +17,7 @@ struct PsychiatristCard: View {
         address: "Rss Sidokerto",
         city: "Pati",
         description: "-",
-        medicalPicture: "Psychiatrist",
+        image: "https://d1bpj0tv6vfxyp.cloudfront.net/sering-dianggap-sama-ini-bedanya-psikolog-dan-psikiaterhalodoc.jpg",
         medicalType: Medical.MedicalType.psychiatrist
     )
     
