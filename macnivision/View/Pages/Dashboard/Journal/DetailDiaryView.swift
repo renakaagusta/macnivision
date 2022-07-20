@@ -26,7 +26,7 @@ struct DetailDiaryView: View {
                 }
                 .padding(.top)
                 
-                Text("You were feeling \(emotion.map{String($0)}.joined(separator: " and ")) at \(time)")
+                Text("You were feeling \(emotion.map{String($0)}.joined(separator: " and "))")
                     .font(.headline)
                     .padding([.top, .leading, .trailing])
                 
@@ -46,15 +46,15 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(diary)
-                                .padding()
-                                .frame(width: 360)
-                                .font(.subheadline)
-                                .background(.white)
-                                .foregroundColor(.black)
-                            
-
-                            Spacer()
+                            ScrollView{
+                                Text(diary)
+                                    .padding()
+                                    .frame(width: 360)
+                                    .font(.subheadline)
+                                    .background(.white)
+                                    .foregroundColor(.black)
+                                Spacer()
+                            }
                         }
                         .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -77,14 +77,16 @@ struct DetailDiaryView: View {
                         }
                         
                         VStack{
-                            Text(note)
-                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                                .frame(width: 360)
-                                .font(.subheadline)
-                                .background(.white)
-                                .foregroundColor(.black)
+                            ScrollView{
+                                Text(note)
+                                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 360)
+                                    .font(.subheadline)
+                                    .background(.white)
+                                    .foregroundColor(.black)
 
-                            Spacer()
+                                Spacer()
+                            }
                         }
                         .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -94,7 +96,7 @@ struct DetailDiaryView: View {
                         .frame(height: 159)
                     }
                 }
-                .navigationBarTitle(Text("\(journalDate)"))
+                .navigationBarTitle(Text("\(journalDate) at \(time)"))
                 .navigationBarTitleDisplayMode(.inline)
                 Spacer()
             }

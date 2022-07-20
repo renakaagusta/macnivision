@@ -36,7 +36,7 @@ struct DailyJournalView: View {
                     let selectedDayJournals = dailyJournals.filter({$0.entryDate.fullDate() == selectedDay.fullDate()})
                     
                     ForEach(selectedDayJournals){ journal in
-                        CardDailyJournalItem(journalItem: journal,
+                        DailyJournalItemCard(journalItem: journal,
                                              journalId: journal.id)
                         .padding(.bottom)
                     }

@@ -16,8 +16,8 @@ struct DailyJournalItemCard: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(red: -0.323, green: 0.675, blue: 0.544), lineWidth: 2)
-                .frame(width: 357, height: 105)
+                .stroke(greenstroke, lineWidth: 2)
+                .frame(width: 357, height: 106)
                 .background(.white)
             
             HStack{
@@ -33,8 +33,8 @@ struct DailyJournalItemCard: View {
                         
                         Spacer()
                         Text("\(journalItem.entryDate.formatted(date: .omitted, time: .shortened))")
-                            .font(.headline)
-                            .fontWeight(.bold)
+                            .font(.body)
+                            .fontWeight(.medium)
                             .foregroundColor(.gray)
                     }
                     Text(journalItem.diary)
@@ -44,7 +44,7 @@ struct DailyJournalItemCard: View {
                         
                 }
                 .padding(.horizontal)
-                .frame(width: 357, height: 105)
+                .frame(width: 357, height: 106)
             }
         }
         .onTapGesture {

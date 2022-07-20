@@ -13,6 +13,7 @@ struct AddJournalView: View {
     @Environment(\.self) var env
     
     @FocusState var isInputActive: Bool
+    @State var dailyJournals = GetJournalModelView().journals
     @State var isAngrySelected: Bool = false
     @State var isSadSelected: Bool = false
     @State var isWorrySelected: Bool = false
@@ -20,6 +21,8 @@ struct AddJournalView: View {
     @State var isHappySelected: Bool = false
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
+    @State var showModal: Bool = false
+    @State var isJournalEmpty: Bool = false
     
     var body: some View {
         ZStack{
@@ -33,6 +36,7 @@ struct AddJournalView: View {
                     VStack{
                         HStack{
                             Text("What do you feel now? ")
+                                .font(.subheadline)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.gray)
                             
@@ -240,6 +244,9 @@ struct AddJournalView: View {
                 .alert(isPresented: $showAlert, content: {
                         return Alert(title: Text(alertTitle))
                 })
+                .sheet(isPresented: $showModal){
+                    AddJournalNotificationView(isFirst: isJournalEmpty, showModal: self.$showModal)
+                }
                 
                 Spacer()
             }
@@ -267,13 +274,20 @@ extension AddJournalView{
     
     private var doneButton: some View{
         Button{
-            if addJournalViewModel.diary.count < 5{
-                showAlert(title: "you haven't describe your emotion")
+            if (addJournalViewModel.emotion.isEmpty) || (addJournalViewModel.diary.count < 5){
+                showAlert(title: "you haven't choose emotion or describe it")
             }
+            
             else{
-                //this should be a place to add data
-                addJournalViewModel.entryDate = Date()
-                showAlert(title: "Great job! Thank you ^^")
+                self.showModal.toggle()
+                if dailyJournals.isEmpty{
+                    isJournalEmpty = true
+                    // add 10 pet food
+                }
+                else{
+                    isJournalEmpty = false
+                    // add 3 pet food
+                }
                 addJournalViewModel.entryDate = Date()
                 self.presentationMode.wrappedValue.dismiss()
                 env.dismiss()

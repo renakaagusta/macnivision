@@ -16,6 +16,9 @@ let greenFont = Color("095627")
 let whitecolor = Color("#FFFFFF")
 let softgreenbackground = Color("#eafaf3")
 let softgraybackground = Color("F2F2F7")
+let grayCalenderBackground = Color("C7C7CC")
+let softblackfont = Color("1C1C1E")
+let greenstroke = Color(red: -0.324, green: 0.671, blue: 0.535)
 
 extension Color {
   init?(_ hex: String) {

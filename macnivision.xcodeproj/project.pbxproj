@@ -50,6 +50,7 @@
 		2FC7C2AA2869A6DA0014A95E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2A92869A6DA0014A95E /* Strings.swift */; };
 		2FC7C2AD2869A7420014A95E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C2AC2869A7420014A95E /* AsyncImage.swift */; };
 		38E4450028811C1300CC97DC /* EmptyDayItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E444FF28811C1300CC97DC /* EmptyDayItemCard.swift */; };
+		38E445042887BDBF00CC97DC /* AddJournalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E445032887BDBF00CC97DC /* AddJournalNotificationView.swift */; };
 		38EEDD94287FFCC400CF487D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEDD93287FFCC400CF487D /* JournalView.swift */; };
 		38EEDD98287FFDCE00CF487D /* DataDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 38EEDD95287FFDCE00CF487D /* DataDummy.json */; };
 		38EEDD99287FFDCE00CF487D /* AddJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEDD96287FFDCE00CF487D /* AddJournal.swift */; };
@@ -120,6 +121,7 @@
 		2FC7C2A92869A6DA0014A95E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = macnivision/Strings.swift; sourceTree = SOURCE_ROOT; };
 		2FC7C2AC2869A7420014A95E /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		38E444FF28811C1300CC97DC /* EmptyDayItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDayItemCard.swift; sourceTree = "<group>"; };
+		38E445032887BDBF00CC97DC /* AddJournalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalNotificationView.swift; sourceTree = "<group>"; };
 		38EEDD93287FFCC400CF487D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		38EEDD95287FFDCE00CF487D /* DataDummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataDummy.json; sourceTree = "<group>"; };
 		38EEDD96287FFDCE00CF487D /* AddJournal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournal.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */,
 				2F99B15E286C2FEE0047CD02 /* JournalView.swift */,
 				38EEDD93287FFCC400CF487D /* JournalView.swift */,
+				38E445032887BDBF00CC97DC /* AddJournalNotificationView.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				38EEDD99287FFDCE00CF487D /* AddJournal.swift in Sources */,
 				2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */,
 				2F80389F286B058B008BF4BF /* Scheme.swift in Sources */,
+				38E445042887BDBF00CC97DC /* AddJournalNotificationView.swift in Sources */,
 				2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */,
 				2F1342F728658DA600A5CB9C /* macnivision.xcdatamodeld in Sources */,
 				2F80389B286AF3B6008BF4BF /* GlobalVariables.swift in Sources */,

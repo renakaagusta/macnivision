@@ -112,36 +112,37 @@ struct JournalView_Previews: PreviewProvider {
 
 extension JournalView{
     private var addJournalButton: some View{
-        ZStack{
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(red: -0.324, green: 0.671, blue: 0.535), lineWidth: 4)
-                .frame(width: 150, height: 30)
-                .background(softgreenbackground)
-            
-            HStack{
-                Label("", systemImage: "plus.circle.fill")
-                    .labelStyle(.iconOnly)
-                    .foregroundColor(.green)
-                Text("Add Journal")
-                    .accentColor(.black)
-            }
+        HStack{
+            Label("", systemImage: "plus.circle.fill")
+                .labelStyle(.iconOnly)
+                .foregroundColor(.white)
+            Text("Add Journal")
+                .font(.headline)
+                .fontWeight(.bold)
+                .accentColor(.white)
         }
+        .frame(width: 150, height: 40)
+        .background(greenbutton)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
     
     private var monthButton: some View{
         ZStack{
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: 110, height: 30)
-                .foregroundColor(greenbutton)
-                
+                .stroke(greenstroke, lineWidth: 4)
+                .frame(width: 110, height: 37)
             
             Picker("Select a month", selection: $monthSelection){
                 ForEach(months, id: \.self){
                     Text($0)
+                        .bold()
                         .fontWeight(.bold)
                 }
             }
-            .accentColor(.white)
+            .frame(width: 110, height: 37)
+            .background(softgreenbackground)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .accentColor(.black)
         }
         
     }
@@ -149,8 +150,9 @@ extension JournalView{
     private var yearButton: some View{
         ZStack{
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: 75, height: 30)
-                .foregroundColor(greenbutton)
+                .stroke(greenstroke, lineWidth: 4)
+                .frame(width: 75, height: 37)
+                .foregroundColor(softgreenbackground)
             
             Picker("Select a year", selection: $yearSelection){
                 ForEach(years, id: \.self){
@@ -158,9 +160,13 @@ extension JournalView{
                         .fontWeight(.bold)
                 }
             }
-            .accentColor(.white)
+            .frame(width: 75, height: 37)
+            .background(softgreenbackground)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .accentColor(.black)
         }
     }
+
     
     func getMonthNumber(monthStr: String) -> Int {
         var monthNumber:Int = 0
