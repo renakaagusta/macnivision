@@ -43,7 +43,6 @@
 		2F991C742869703F00B4E914 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C732869703F00B4E914 /* PetView.swift */; };
 		2F991C792869706D00B4E914 /* MedicalInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F991C782869706D00B4E914 /* MedicalInfoListView.swift */; };
 		2F99B162286C2FEE0047CD02 /* DetailDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */; };
-		2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B15E286C2FEE0047CD02 /* JournalView.swift */; };
 		2F99B166286C2FEE0047CD02 /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B160286C2FEE0047CD02 /* AddJournalView.swift */; };
 		2F99B167286C2FEE0047CD02 /* DailyJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */; };
 		2F99B172286C44CC0047CD02 /* PetFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99B171286C44CC0047CD02 /* PetFoodBar.swift */; };
@@ -64,6 +63,7 @@
 		2FF4167F287AE39D00B849D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4167E287AE39D00B849D6 /* CloudKit.framework */; };
 		2FF41681287AE90D00B849D6 /* GetMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41680287AE90D00B849D6 /* GetMedical.swift */; };
 		2FF41699287AE9C400B849D6 /* DayItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41698287AE9C400B849D6 /* DayItemCard.swift */; };
+		687E9CEB2886B29100739985 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E9CEA2886B29100739985 /* JournalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +123,6 @@
 		2F991C732869703F00B4E914 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		2F991C782869706D00B4E914 /* MedicalInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoListView.swift; sourceTree = "<group>"; };
 		2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDiaryView.swift; sourceTree = "<group>"; };
-		2F99B15E286C2FEE0047CD02 /* JournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalView.swift; path = "../../../../../../../../Downloads/macnivision-feature-journal-tab-view 3/macnivision/View/Pages/JournalView.swift"; sourceTree = "<group>"; };
 		2F99B160286C2FEE0047CD02 /* AddJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
 		2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyJournalView.swift; sourceTree = "<group>"; };
 		2F99B171286C44CC0047CD02 /* PetFoodBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetFoodBar.swift; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		2FF4167E287AE39D00B849D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2FF41680287AE90D00B849D6 /* GetMedical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMedical.swift; sourceTree = "<group>"; };
 		2FF41698287AE9C400B849D6 /* DayItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItemCard.swift; sourceTree = "<group>"; };
+		687E9CEA2886B29100739985 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +295,7 @@
 				2F99B160286C2FEE0047CD02 /* AddJournalView.swift */,
 				2F99B161286C2FEE0047CD02 /* DailyJournalView.swift */,
 				2F99B15C286C2FEE0047CD02 /* DetailDiaryView.swift */,
-				2F99B15E286C2FEE0047CD02 /* JournalView.swift */,
+				687E9CEA2886B29100739985 /* JournalView.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -689,7 +689,6 @@
 				2FC7C2A82869A66A0014A95E /* Colors.swift in Sources */,
 				2FC7C2912869A0750014A95E /* ElevatedButton.swift in Sources */,
 				2F82D08B287E9BF30000843A /* AddUser.swift in Sources */,
-				2F99B164286C2FEE0047CD02 /* JournalView.swift in Sources */,
 				2F82D085287E9A210000843A /* UpdatePet.swift in Sources */,
 				2F82D083287E85910000843A /* AddPet.swift in Sources */,
 				2F82D072287E30670000843A /* JournalService.swift in Sources */,
@@ -732,6 +731,7 @@
 				2F80388E286AEDC4008BF4BF /* OnboardingView.swift in Sources */,
 				2F82D080287E46F70000843A /* PetService.swift in Sources */,
 				2FF41679287AE20D00B849D6 /* DailyJournalItemCard.swift in Sources */,
+				687E9CEB2886B29100739985 /* JournalView.swift in Sources */,
 				2FF41699287AE9C400B849D6 /* DayItemCard.swift in Sources */,
 				2F82D088287E9A540000843A /* UserService.swift in Sources */,
 				2FF41677287AE20100B849D6 /* HealtCareCard.swift in Sources */,

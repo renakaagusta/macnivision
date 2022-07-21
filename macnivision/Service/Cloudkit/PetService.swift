@@ -81,7 +81,7 @@ class PetService {
                 id: index,
                 recordId: recordId,
                 userId: userId as! String,
-                hungryLevel: hungryLevel as! Int,
+                hungryLevel: hungryLevel as! Float,
                 foodAmount: foodAmount as! Int,
                 typePet: (typePet as! String == "cat" ? Pet.TypePet.cat : Pet.TypePet.dog)
             ))

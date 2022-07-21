@@ -13,17 +13,23 @@ struct PetView: View {
     @State var getPet: Pet = Pet(
         id: 0,
         recordId: "",
-        userId: 0,
+        userId: "",
         hungryLevel: 0.0,
         foodAmount: 0,
-        typePet: .cat
+        typePet: .dog
+    )
+    
+    @State var getUser: User = User (
+        id: 0,
+        recordId: "",
+        nickname: ""
     )
     
     //Variable to control Food & Hunger System
     @State var currentHungryPercent: Float = 0 //to contain and check current hungry level for decreasing level system
     @State private var counter = 0 //count how much tap
     @State var totalFood: Int = 0 //PetGlobalVariable.petGlobal.petFoodAmount
-    var foodBonus: CGFloat = 25 //Amount percentage oh healthbar restore when user feed the pet
+    var foodBonus: CGFloat = 1 //Amount percentage oh healthbar restore when user feed the pet
     
     //Condition to control Pet Emotion
     @State var isDog:Bool
@@ -290,40 +296,6 @@ struct PetView: View {
                                 }
                             }.offset(y: 180)
                             
-//                            if isHungry == true {
-//                                ZStack {
-//                                    //Dialogue box laper
-//                                    Image("dialoguebox short")
-//                                        .resizable()
-//                                        .frame(width: 200, height: 100)
-//                                        .offset(x: 75, y: -300)
-//
-//                                    //Text dialogue laper
-//                                    Text("I'm Hungry, please feed me")
-//                                        .font(.system(size: 15, weight: .bold))
-//                                        .offset(x: 75, y: -302)
-//                                        .frame(width: 150, height: 80, alignment: .center)
-//                                        .multilineTextAlignment(.center)
-//                                }
-//
-//                                //Image kalau petnya laper
-//                                switch getPet.typePet {
-//                                    case .dog:
-//                                            Image("Dog hungry")
-//                                                .resizable()
-//                                                .aspectRatio(contentMode: .fit)
-//                                                .frame(width: 350, height: 350)
-//                                                .font(.system(size: 15))
-//                                                .offset(x:15, y:-80)
-//                                        default:
-//                                            Image("Cat hungry")
-//                                                .resizable()
-//                                                .aspectRatio(contentMode: .fit)
-//                                                .frame(width: 350, height: 350)
-//                                                .font(.system(size: 15))
-//                                                .offset(x:15, y:-80)
-//                                }
-//                            }
                         }
                 }
                     .animation(nil)
@@ -406,7 +378,7 @@ struct PetView: View {
 
 struct PetView_Previews: PreviewProvider {
     static var previews: some View {
-        PetView().preferredColorScheme(scheme)
+        PetView().preferredColorScheme(.light)
     }
 }
 

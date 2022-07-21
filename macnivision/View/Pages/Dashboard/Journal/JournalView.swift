@@ -2,7 +2,7 @@
 //  JournalView.swift
 //  macnivision
 //
-//  Created by Jevier Izza Maulana on 11/07/22.
+//  Created by Jevier Izza Maulana on 19/07/22.
 //
 
 import SwiftUI
