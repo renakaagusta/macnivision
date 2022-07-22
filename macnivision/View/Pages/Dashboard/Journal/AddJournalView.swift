@@ -12,7 +12,8 @@ struct AddJournalView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.self) var env
     
-    @FocusState var isInputActive: Bool
+    @FocusState var isInputActive: Int?
+    
     @State var dailyJournals = GetJournalModelView().journals
     @State var isAngrySelected: Bool = false
     @State var isSadSelected: Bool = false
@@ -178,24 +179,8 @@ struct AddJournalView: View {
                             Spacer()
                         }
                         
-                        TextEditor(text: $addJournalViewModel.diary)
-                            .padding(.horizontal)
-                            .font(.headline)
-                            .frame(height: 159)
-                            .colorMultiply(Color.gray)
-                            .opacity(0.3)
-                            .foregroundColor(Color.black)
-                            .focused($isInputActive)
-                            .toolbar{
-                                ToolbarItemGroup(placement: .keyboard) {
-                                                        Spacer()
-
-                                                        Button("Done") {
-                                                            isInputActive = false
-                                                        }
-                                                    }
-                            }
-                    }
+                        TextEditorPlaceholder(value: $addJournalViewModel.diary, tag: 1, focused: $isInputActive)
+                                                    .focused($isInputActive, equals: 1)                    }
                 }
                 .frame(width: 350, height: 225)
                 .padding(.horizontal)
@@ -215,23 +200,8 @@ struct AddJournalView: View {
                             Spacer()
                         }
                         
-                        TextEditor(text: $addJournalViewModel.note)
-                            .padding(.horizontal)
-                            .font(.headline)
-                            .frame(height: 159)
-                            .colorMultiply(Color.gray)
-                            .opacity(0.3)
-                            .foregroundColor(Color.black)
-                            .focused($isInputActive)
-                            .toolbar{
-                                ToolbarItemGroup(placement: .keyboard) {
-                                                        Spacer()
-
-                                                        Button("Done") {
-                                                            isInputActive = false
-                                                        }
-                                                    }
-                            }
+                        TextEditorPlaceholder(value: $addJournalViewModel.note, tag: 2, focused: $isInputActive)
+                                                    .focused($isInputActive, equals: 2)
                     }
                 }
                 .frame(width: 350, height: 225)
@@ -259,6 +229,33 @@ struct AddJournalView: View {
     func showAlert(title: String){
         alertTitle =  title
         showAlert.toggle()
+    }
+}
+
+struct TextEditorPlaceholder: View{
+    @Binding var value: String
+    var tag: Int
+    var focused: FocusState<Int?>.Binding
+    
+    var body: some View{
+        TextEditor(text: $value)
+            .padding(.horizontal)
+            .font(.headline)
+            .frame(height: 159)
+            .colorMultiply(Color.gray)
+            .opacity(0.3)
+            .foregroundColor(Color.black)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    HStack {
+                        if focused.wrappedValue == tag {
+                            Button("Done") {
+                                focused.wrappedValue = nil
+                            }
+                        }
+                    }
+                }
+            }
     }
 }
 
